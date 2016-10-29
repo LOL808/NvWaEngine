@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A0437B11DBE0F4100ACBAD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0437B01DBE0F4100ACBAD2 /* QuartzCore.framework */; };
+		2A0437BD1DBE453A00ACBAD2 /* NWGLView-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0437BB1DBE453A00ACBAD2 /* NWGLView-iOS.h */; };
+		2A0437BF1DBE463600ACBAD2 /* NWGLView-iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0437BC1DBE453A00ACBAD2 /* NWGLView-iOS.m */; };
+		2A0437D01DBE4A8200ACBAD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0437CF1DBE4A8200ACBAD2 /* UIKit.framework */; };
+		2A0437D31DBE4C5000ACBAD2 /* Director.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A0437D11DBE4C5000ACBAD2 /* Director.cpp */; };
+		2A0437D41DBE4C5000ACBAD2 /* Director.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0437D21DBE4C5000ACBAD2 /* Director.h */; };
+		2A0437DB1DBE500700ACBAD2 /* GLViewImpl-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A0437DA1DBE500700ACBAD2 /* GLViewImpl-iOS.mm */; };
+		2A5997C51DC0A6B3006B83BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5997C11DC0A669006B83BB /* Foundation.framework */; };
+		2A71AD3C1DC352B200C1021B /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A71AD3B1DC352B200C1021B /* libpng.a */; };
+		2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B21DC1AA710040F061 /* Node.cpp */; };
+		2A87A5B51DC1AA710040F061 /* Node.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5B31DC1AA710040F061 /* Node.h */; };
+		2A87A5B91DC1AC660040F061 /* NWGLProgramCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B71DC1AC660040F061 /* NWGLProgramCache.cpp */; };
+		2A87A5BA1DC1AC660040F061 /* NWGLProgramCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5B81DC1AC660040F061 /* NWGLProgramCache.h */; };
+		2A87A5C11DC1AF690040F061 /* NWGLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5BF1DC1AF690040F061 /* NWGLProgram.cpp */; };
+		2A87A5C21DC1AF690040F061 /* NWGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5C01DC1AF690040F061 /* NWGLProgram.h */; };
+		2A87A5C41DC1D0590040F061 /* NWMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5C31DC1D0590040F061 /* NWMacro.h */; };
+		2A87A5C71DC1E7B10040F061 /* TestDrawNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5C51DC1E7B10040F061 /* TestDrawNode.cpp */; };
+		2A87A5C81DC1E7B10040F061 /* TestDrawNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5C61DC1E7B10040F061 /* TestDrawNode.h */; };
+		2A9265551DBDD0B2005302A5 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9265491DBDCFF8005302A5 /* Game.h */; };
+		2A9265561DBDD0B2005302A5 /* GameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A92654A1DBDCFF8005302A5 /* GameProtocol.h */; };
+		2A92655A1DBDD379005302A5 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9265591DBDD379005302A5 /* Logger.h */; };
+		2A92656B1DBDE59D005302A5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A92656A1DBDE59D005302A5 /* OpenGLES.framework */; };
+		2ABEE1251DBF158A00D5DE00 /* NWTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1241DBF158A00D5DE00 /* NWTypes.h */; };
+		2ABEE1281DBF1CD600D5DE00 /* PlatformDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1271DBF1CD600D5DE00 /* PlatformDefine.h */; };
+		2ABEE12B1DBF215500D5DE00 /* NWMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1291DBF215500D5DE00 /* NWMath.c */; };
+		2ABEE12C1DBF215500D5DE00 /* NWMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE12A1DBF215500D5DE00 /* NWMath.h */; };
+		2ABEE13B1DBF6B3400D5DE00 /* CC3Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1311DBF6B3400D5DE00 /* CC3Foundation.h */; };
+		2ABEE13C1DBF6B3400D5DE00 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1321DBF6B3400D5DE00 /* CC3Foundation.m */; };
+		2ABEE13D1DBF6B3400D5DE00 /* CC3GLMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1331DBF6B3400D5DE00 /* CC3GLMatrix.h */; };
+		2ABEE13E1DBF6B3400D5DE00 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1341DBF6B3400D5DE00 /* CC3GLMatrix.m */; };
+		2ABEE13F1DBF6B3400D5DE00 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1351DBF6B3400D5DE00 /* CC3Kazmath.c */; };
+		2ABEE1401DBF6B3400D5DE00 /* CC3Kazmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1361DBF6B3400D5DE00 /* CC3Kazmath.h */; };
+		2ABEE1411DBF6B3400D5DE00 /* CC3Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1371DBF6B3400D5DE00 /* CC3Logging.h */; };
+		2ABEE1421DBF6B3400D5DE00 /* CC3Math.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1381DBF6B3400D5DE00 /* CC3Math.h */; };
+		2ABEE1431DBF6B3400D5DE00 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1391DBF6B3400D5DE00 /* CC3Math.m */; };
+		2ABEE1441DBF6B3400D5DE00 /* ccTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE13A1DBF6B3400D5DE00 /* ccTypes.h */; };
+		2ABEE1471DBF93A800D5DE00 /* NWMatMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1451DBF93A800D5DE00 /* NWMatMath.c */; };
+		2ABEE1481DBF93A800D5DE00 /* NWMatMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1461DBF93A800D5DE00 /* NWMatMath.h */; };
+		2ABEE14D1DC0796100D5DE00 /* DirectorCaller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */; };
+		2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */; };
+		2AFCD6931DC0803B0094116F /* Game-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCD6921DC0803B0094116F /* Game-iOS.mm */; };
+		2AFCD69D1DC08FFA0094116F /* RenderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */; };
+		2AFCD69E1DC08FFA0094116F /* RenderTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFCD69C1DC08FFA0094116F /* RenderTest.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A0437B01DBE0F4100ACBAD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2A0437BB1DBE453A00ACBAD2 /* NWGLView-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NWGLView-iOS.h"; sourceTree = "<group>"; };
+		2A0437BC1DBE453A00ACBAD2 /* NWGLView-iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NWGLView-iOS.m"; sourceTree = "<group>"; };
+		2A0437CF1DBE4A8200ACBAD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2A0437D11DBE4C5000ACBAD2 /* Director.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Director.cpp; path = Core/Director.cpp; sourceTree = SOURCE_ROOT; };
+		2A0437D21DBE4C5000ACBAD2 /* Director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Director.h; path = Core/Director.h; sourceTree = SOURCE_ROOT; };
+		2A0437DA1DBE500700ACBAD2 /* GLViewImpl-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLViewImpl-iOS.mm"; sourceTree = "<group>"; };
+		2A0437DC1DBE51CF00ACBAD2 /* GLViewImpl-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLViewImpl-iOS.h"; sourceTree = "<group>"; };
+		2A5997C11DC0A669006B83BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A5997C31DC0A692006B83BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2A6234351DBDCBCD004152BA /* libNvWaEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNvWaEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6234461DBDCC22004152BA /* NvWa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvWa.h; sourceTree = "<group>"; };
+		2A71AD3B1DC352B200C1021B /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng.a; sourceTree = "<group>"; };
+		2A87A5B21DC1AA710040F061 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		2A87A5B31DC1AA710040F061 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		2A87A5B71DC1AC660040F061 /* NWGLProgramCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWGLProgramCache.cpp; sourceTree = "<group>"; };
+		2A87A5B81DC1AC660040F061 /* NWGLProgramCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWGLProgramCache.h; sourceTree = "<group>"; };
+		2A87A5BF1DC1AF690040F061 /* NWGLProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWGLProgram.cpp; sourceTree = "<group>"; };
+		2A87A5C01DC1AF690040F061 /* NWGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWGLProgram.h; sourceTree = "<group>"; };
+		2A87A5C31DC1D0590040F061 /* NWMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NWMacro.h; path = Utils/NWMacro.h; sourceTree = SOURCE_ROOT; };
+		2A87A5C51DC1E7B10040F061 /* TestDrawNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDrawNode.cpp; sourceTree = "<group>"; };
+		2A87A5C61DC1E7B10040F061 /* TestDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDrawNode.h; sourceTree = "<group>"; };
+		2A9265491DBDCFF8005302A5 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Core/Game.h; sourceTree = SOURCE_ROOT; };
+		2A92654A1DBDCFF8005302A5 /* GameProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameProtocol.h; path = Core/GameProtocol.h; sourceTree = SOURCE_ROOT; };
+		2A9265591DBDD379005302A5 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Utils/Logger.h; sourceTree = SOURCE_ROOT; };
+		2A9265621DBDE453005302A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A92656A1DBDE59D005302A5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2ABEE1241DBF158A00D5DE00 /* NWTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTypes.h; sourceTree = "<group>"; };
+		2ABEE1271DBF1CD600D5DE00 /* PlatformDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformDefine.h; sourceTree = "<group>"; };
+		2ABEE1291DBF215500D5DE00 /* NWMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NWMath.c; sourceTree = "<group>"; };
+		2ABEE12A1DBF215500D5DE00 /* NWMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMath.h; sourceTree = "<group>"; };
+		2ABEE1311DBF6B3400D5DE00 /* CC3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Foundation.h; sourceTree = "<group>"; };
+		2ABEE1321DBF6B3400D5DE00 /* CC3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Foundation.m; sourceTree = "<group>"; };
+		2ABEE1331DBF6B3400D5DE00 /* CC3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3GLMatrix.h; sourceTree = "<group>"; };
+		2ABEE1341DBF6B3400D5DE00 /* CC3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3GLMatrix.m; sourceTree = "<group>"; };
+		2ABEE1351DBF6B3400D5DE00 /* CC3Kazmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CC3Kazmath.c; sourceTree = "<group>"; };
+		2ABEE1361DBF6B3400D5DE00 /* CC3Kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Kazmath.h; sourceTree = "<group>"; };
+		2ABEE1371DBF6B3400D5DE00 /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
+		2ABEE1381DBF6B3400D5DE00 /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
+		2ABEE1391DBF6B3400D5DE00 /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Math.m; sourceTree = "<group>"; };
+		2ABEE13A1DBF6B3400D5DE00 /* ccTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccTypes.h; sourceTree = "<group>"; };
+		2ABEE1451DBF93A800D5DE00 /* NWMatMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NWMatMath.c; sourceTree = "<group>"; };
+		2ABEE1461DBF93A800D5DE00 /* NWMatMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMatMath.h; sourceTree = "<group>"; };
+		2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DirectorCaller.mm; sourceTree = "<group>"; };
+		2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorCaller.h; sourceTree = "<group>"; };
+		2AFCD6921DC0803B0094116F /* Game-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Game-iOS.mm"; sourceTree = "<group>"; };
+		2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderTest.cpp; path = Core/RenderTest.cpp; sourceTree = SOURCE_ROOT; };
+		2AFCD69C1DC08FFA0094116F /* RenderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderTest.h; path = Core/RenderTest.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A6234321DBDCBCD004152BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A71AD3C1DC352B200C1021B /* libpng.a in Frameworks */,
+				2A5997C51DC0A6B3006B83BB /* Foundation.framework in Frameworks */,
+				2A0437D01DBE4A8200ACBAD2 /* UIKit.framework in Frameworks */,
+				2A0437B11DBE0F4100ACBAD2 /* QuartzCore.framework in Frameworks */,
+				2A92656B1DBDE59D005302A5 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A62342C1DBDCBCD004152BA = {
+			isa = PBXGroup;
+			children = (
+				2A9265611DBDE235005302A5 /* Frameworks */,
+				2A6234371DBDCBCD004152BA /* NvWaEngine */,
+				2A6234361DBDCBCD004152BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A6234361DBDCBCD004152BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A6234351DBDCBCD004152BA /* libNvWaEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A6234371DBDCBCD004152BA /* NvWaEngine */ = {
+			isa = PBXGroup;
+			children = (
+				2A6234461DBDCC22004152BA /* NvWa.h */,
+				2A87A5B61DC1AC0B0040F061 /* Rendering */,
+				2A87A5B11DC1AA5D0040F061 /* Nodes */,
+				2ABEE1301DBF6B3400D5DE00 /* Cocos3DMathLib */,
+				2ABEE1221DBF14C100D5DE00 /* Math */,
+				2A6234411DBDCC17004152BA /* Core */,
+				2A9265641DBDE4D8005302A5 /* Platform */,
+				2A9265571DBDD23E005302A5 /* Utils */,
+			);
+			path = NvWaEngine;
+			sourceTree = "<group>";
+		};
+		2A6234411DBDCC17004152BA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2A9265491DBDCFF8005302A5 /* Game.h */,
+				2A92654A1DBDCFF8005302A5 /* GameProtocol.h */,
+				2A0437D11DBE4C5000ACBAD2 /* Director.cpp */,
+				2A0437D21DBE4C5000ACBAD2 /* Director.h */,
+				2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */,
+				2AFCD69C1DC08FFA0094116F /* RenderTest.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2A87A5B11DC1AA5D0040F061 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				2A87A5B21DC1AA710040F061 /* Node.cpp */,
+				2A87A5B31DC1AA710040F061 /* Node.h */,
+				2A87A5C51DC1E7B10040F061 /* TestDrawNode.cpp */,
+				2A87A5C61DC1E7B10040F061 /* TestDrawNode.h */,
+			);
+			path = Nodes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2A87A5B61DC1AC0B0040F061 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				2A87A5B71DC1AC660040F061 /* NWGLProgramCache.cpp */,
+				2A87A5B81DC1AC660040F061 /* NWGLProgramCache.h */,
+				2A87A5BF1DC1AF690040F061 /* NWGLProgram.cpp */,
+				2A87A5C01DC1AF690040F061 /* NWGLProgram.h */,
+			);
+			path = Rendering;
+			sourceTree = SOURCE_ROOT;
+		};
+		2A9265571DBDD23E005302A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A9265591DBDD379005302A5 /* Logger.h */,
+				2A87A5C31DC1D0590040F061 /* NWMacro.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		2A9265611DBDE235005302A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A71AD3B1DC352B200C1021B /* libpng.a */,
+				2A5997C31DC0A692006B83BB /* CoreFoundation.framework */,
+				2A5997C11DC0A669006B83BB /* Foundation.framework */,
+				2A0437CF1DBE4A8200ACBAD2 /* UIKit.framework */,
+				2A0437B01DBE0F4100ACBAD2 /* QuartzCore.framework */,
+				2A92656A1DBDE59D005302A5 /* OpenGLES.framework */,
+				2A9265621DBDE453005302A5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A9265641DBDE4D8005302A5 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				2A9265651DBDE4D8005302A5 /* iOS */,
+				2ABEE1271DBF1CD600D5DE00 /* PlatformDefine.h */,
+			);
+			path = Platform;
+			sourceTree = SOURCE_ROOT;
+		};
+		2A9265651DBDE4D8005302A5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2A0437BB1DBE453A00ACBAD2 /* NWGLView-iOS.h */,
+				2A0437BC1DBE453A00ACBAD2 /* NWGLView-iOS.m */,
+				2A0437DA1DBE500700ACBAD2 /* GLViewImpl-iOS.mm */,
+				2A0437DC1DBE51CF00ACBAD2 /* GLViewImpl-iOS.h */,
+				2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */,
+				2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */,
+				2AFCD6921DC0803B0094116F /* Game-iOS.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		2ABEE1221DBF14C100D5DE00 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				2ABEE1241DBF158A00D5DE00 /* NWTypes.h */,
+				2ABEE1291DBF215500D5DE00 /* NWMath.c */,
+				2ABEE12A1DBF215500D5DE00 /* NWMath.h */,
+				2ABEE1451DBF93A800D5DE00 /* NWMatMath.c */,
+				2ABEE1461DBF93A800D5DE00 /* NWMatMath.h */,
+			);
+			path = Math;
+			sourceTree = SOURCE_ROOT;
+		};
+		2ABEE1301DBF6B3400D5DE00 /* Cocos3DMathLib */ = {
+			isa = PBXGroup;
+			children = (
+				2ABEE1311DBF6B3400D5DE00 /* CC3Foundation.h */,
+				2ABEE1321DBF6B3400D5DE00 /* CC3Foundation.m */,
+				2ABEE1331DBF6B3400D5DE00 /* CC3GLMatrix.h */,
+				2ABEE1341DBF6B3400D5DE00 /* CC3GLMatrix.m */,
+				2ABEE1351DBF6B3400D5DE00 /* CC3Kazmath.c */,
+				2ABEE1361DBF6B3400D5DE00 /* CC3Kazmath.h */,
+				2ABEE1371DBF6B3400D5DE00 /* CC3Logging.h */,
+				2ABEE1381DBF6B3400D5DE00 /* CC3Math.h */,
+				2ABEE1391DBF6B3400D5DE00 /* CC3Math.m */,
+				2ABEE13A1DBF6B3400D5DE00 /* ccTypes.h */,
+			);
+			path = Cocos3DMathLib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A92654F1DBDD07B005302A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AFCD69E1DC08FFA0094116F /* RenderTest.h in Headers */,
+				2A87A5C21DC1AF690040F061 /* NWGLProgram.h in Headers */,
+				2A87A5C41DC1D0590040F061 /* NWMacro.h in Headers */,
+				2A0437D41DBE4C5000ACBAD2 /* Director.h in Headers */,
+				2A87A5BA1DC1AC660040F061 /* NWGLProgramCache.h in Headers */,
+				2ABEE1481DBF93A800D5DE00 /* NWMatMath.h in Headers */,
+				2ABEE1421DBF6B3400D5DE00 /* CC3Math.h in Headers */,
+				2A87A5B51DC1AA710040F061 /* Node.h in Headers */,
+				2A0437BD1DBE453A00ACBAD2 /* NWGLView-iOS.h in Headers */,
+				2ABEE13B1DBF6B3400D5DE00 /* CC3Foundation.h in Headers */,
+				2ABEE1251DBF158A00D5DE00 /* NWTypes.h in Headers */,
+				2ABEE1441DBF6B3400D5DE00 /* ccTypes.h in Headers */,
+				2ABEE13D1DBF6B3400D5DE00 /* CC3GLMatrix.h in Headers */,
+				2ABEE1411DBF6B3400D5DE00 /* CC3Logging.h in Headers */,
+				2A87A5C81DC1E7B10040F061 /* TestDrawNode.h in Headers */,
+				2A9265551DBDD0B2005302A5 /* Game.h in Headers */,
+				2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */,
+				2ABEE1401DBF6B3400D5DE00 /* CC3Kazmath.h in Headers */,
+				2A92655A1DBDD379005302A5 /* Logger.h in Headers */,
+				2ABEE1281DBF1CD600D5DE00 /* PlatformDefine.h in Headers */,
+				2ABEE12C1DBF215500D5DE00 /* NWMath.h in Headers */,
+				2A9265561DBDD0B2005302A5 /* GameProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A6234341DBDCBCD004152BA /* NvWaEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A62343E1DBDCBCD004152BA /* Build configuration list for PBXNativeTarget "NvWaEngine" */;
+			buildPhases = (
+				2A6234311DBDCBCD004152BA /* Sources */,
+				2A6234321DBDCBCD004152BA /* Frameworks */,
+				2A92654F1DBDD07B005302A5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NvWaEngine;
+			productName = NvWaEngine;
+			productReference = 2A6234351DBDCBCD004152BA /* libNvWaEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A62342D1DBDCBCD004152BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = /help;
+				TargetAttributes = {
+					2A6234341DBDCBCD004152BA = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 2A6234301DBDCBCD004152BA /* Build configuration list for PBXProject "NvWaEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A62342C1DBDCBCD004152BA;
+			productRefGroup = 2A6234361DBDCBCD004152BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A6234341DBDCBCD004152BA /* NvWaEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A6234311DBDCBCD004152BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A0437BF1DBE463600ACBAD2 /* NWGLView-iOS.m in Sources */,
+				2A87A5C11DC1AF690040F061 /* NWGLProgram.cpp in Sources */,
+				2ABEE1471DBF93A800D5DE00 /* NWMatMath.c in Sources */,
+				2AFCD6931DC0803B0094116F /* Game-iOS.mm in Sources */,
+				2ABEE14D1DC0796100D5DE00 /* DirectorCaller.mm in Sources */,
+				2A87A5C71DC1E7B10040F061 /* TestDrawNode.cpp in Sources */,
+				2ABEE13C1DBF6B3400D5DE00 /* CC3Foundation.m in Sources */,
+				2ABEE1431DBF6B3400D5DE00 /* CC3Math.m in Sources */,
+				2A0437D31DBE4C5000ACBAD2 /* Director.cpp in Sources */,
+				2AFCD69D1DC08FFA0094116F /* RenderTest.cpp in Sources */,
+				2ABEE13E1DBF6B3400D5DE00 /* CC3GLMatrix.m in Sources */,
+				2A87A5B91DC1AC660040F061 /* NWGLProgramCache.cpp in Sources */,
+				2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */,
+				2A0437DB1DBE500700ACBAD2 /* GLViewImpl-iOS.mm in Sources */,
+				2ABEE13F1DBF6B3400D5DE00 /* CC3Kazmath.c in Sources */,
+				2ABEE12B1DBF215500D5DE00 /* NWMath.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A62343C1DBDCBCD004152BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Core",
+					"$(SRCROOT)/Utils",
+					"$(SRCROOT)/Platform/iOS",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Platform/iOS";
+			};
+			name = Debug;
+		};
+		2A62343D1DBDCBCD004152BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Core",
+					"$(SRCROOT)/Utils",
+					"$(SRCROOT)/Platform/iOS",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Platform/iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A62343F1DBDCBCD004152BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Core",
+					"$(SRCROOT)/Utils",
+					"$(SRCROOT)/Platform/iOS",
+					"$(SRCROOT)/Math",
+					"$(SRCROOT)/Platform",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Core";
+			};
+			name = Debug;
+		};
+		2A6234401DBDCBCD004152BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Core",
+					"$(SRCROOT)/Utils",
+					"$(SRCROOT)/Platform/iOS",
+					"$(SRCROOT)/Math",
+					"$(SRCROOT)/Platform",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Core";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A6234301DBDCBCD004152BA /* Build configuration list for PBXProject "NvWaEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A62343C1DBDCBCD004152BA /* Debug */,
+				2A62343D1DBDCBCD004152BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A62343E1DBDCBCD004152BA /* Build configuration list for PBXNativeTarget "NvWaEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A62343F1DBDCBCD004152BA /* Debug */,
+				2A6234401DBDCBCD004152BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A62342D1DBDCBCD004152BA /* Project object */;
+}

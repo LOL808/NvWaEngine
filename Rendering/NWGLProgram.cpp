@@ -58,7 +58,7 @@ bool NWGLProgram::initWithShaders(const char *vshContent, const char *fshContent
 
         _projectionUniform = glGetUniformLocation(_program, "Projection");
 //
-//        glEnableVertexAttribArray(_projectionUniform);
+        glEnableVertexAttribArray(_projectionUniform);
         glEnableVertexAttribArray(_positionSlot);
         glEnableVertexAttribArray(_colorSlot);
 

@@ -35,6 +35,9 @@
 #include "Nodes/Node.h"
 #include "Nodes/TestDrawNode.h"
 
+//FILE
+#include "Utils/NWFileHelper.h"
+
 //iOS
 #include "Platform/iOS/GLViewImpl-iOS.h"
 

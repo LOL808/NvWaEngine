@@ -53,12 +53,16 @@ Director::~Director() {
 
 Director::Director() {
 
+    FileHelper::getInstance();
+
+
 }
 
 
 void Director::mainLoop() {
 //    cout<<"C++ thread id : "<<std::this_thread::get_id()<<endl;
-    testFoo();
+//    testFoo();
+    
 }
 
 bool first = true;

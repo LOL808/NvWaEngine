@@ -14,6 +14,9 @@
 		2A0437D31DBE4C5000ACBAD2 /* Director.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A0437D11DBE4C5000ACBAD2 /* Director.cpp */; };
 		2A0437D41DBE4C5000ACBAD2 /* Director.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0437D21DBE4C5000ACBAD2 /* Director.h */; };
 		2A0437DB1DBE500700ACBAD2 /* GLViewImpl-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A0437DA1DBE500700ACBAD2 /* GLViewImpl-iOS.mm */; };
+		2A4E708B1DC4ED3F00E90562 /* NWFilePorting-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E70891DC4ED3F00E90562 /* NWFilePorting-iOS.mm */; };
+		2A4E708F1DC4EF5500E90562 /* NWFileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E708D1DC4EF5500E90562 /* NWFileHelper.cpp */; };
+		2A4E70901DC4EF5500E90562 /* NWFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4E708E1DC4EF5500E90562 /* NWFileHelper.h */; };
 		2A5997C51DC0A6B3006B83BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5997C11DC0A669006B83BB /* Foundation.framework */; };
 		2A71AD3C1DC352B200C1021B /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A71AD3B1DC352B200C1021B /* libpng.a */; };
 		2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B21DC1AA710040F061 /* Node.cpp */; };
@@ -61,6 +64,9 @@
 		2A0437D21DBE4C5000ACBAD2 /* Director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Director.h; path = Core/Director.h; sourceTree = SOURCE_ROOT; };
 		2A0437DA1DBE500700ACBAD2 /* GLViewImpl-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLViewImpl-iOS.mm"; sourceTree = "<group>"; };
 		2A0437DC1DBE51CF00ACBAD2 /* GLViewImpl-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLViewImpl-iOS.h"; sourceTree = "<group>"; };
+		2A4E70891DC4ED3F00E90562 /* NWFilePorting-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NWFilePorting-iOS.mm"; sourceTree = "<group>"; };
+		2A4E708D1DC4EF5500E90562 /* NWFileHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NWFileHelper.cpp; path = Utils/NWFileHelper.cpp; sourceTree = SOURCE_ROOT; };
+		2A4E708E1DC4EF5500E90562 /* NWFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NWFileHelper.h; path = Utils/NWFileHelper.h; sourceTree = SOURCE_ROOT; };
 		2A5997C11DC0A669006B83BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A5997C31DC0A692006B83BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2A6234351DBDCBCD004152BA /* libNvWaEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNvWaEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +195,8 @@
 		2A9265571DBDD23E005302A5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2A4E708D1DC4EF5500E90562 /* NWFileHelper.cpp */,
+				2A4E708E1DC4EF5500E90562 /* NWFileHelper.h */,
 				2A9265591DBDD379005302A5 /* Logger.h */,
 				2A87A5C31DC1D0590040F061 /* NWMacro.h */,
 			);
@@ -228,6 +236,7 @@
 				2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */,
 				2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */,
 				2AFCD6921DC0803B0094116F /* Game-iOS.mm */,
+				2A4E70891DC4ED3F00E90562 /* NWFilePorting-iOS.mm */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				2A87A5C81DC1E7B10040F061 /* TestDrawNode.h in Headers */,
 				2A9265551DBDD0B2005302A5 /* Game.h in Headers */,
 				2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */,
+				2A4E70901DC4EF5500E90562 /* NWFileHelper.h in Headers */,
 				2ABEE1401DBF6B3400D5DE00 /* CC3Kazmath.h in Headers */,
 				2A92655A1DBDD379005302A5 /* Logger.h in Headers */,
 				2ABEE1281DBF1CD600D5DE00 /* PlatformDefine.h in Headers */,
@@ -351,9 +361,11 @@
 			files = (
 				2A0437BF1DBE463600ACBAD2 /* NWGLView-iOS.m in Sources */,
 				2A87A5C11DC1AF690040F061 /* NWGLProgram.cpp in Sources */,
+				2A4E708B1DC4ED3F00E90562 /* NWFilePorting-iOS.mm in Sources */,
 				2ABEE1471DBF93A800D5DE00 /* NWMatMath.c in Sources */,
 				2AFCD6931DC0803B0094116F /* Game-iOS.mm in Sources */,
 				2ABEE14D1DC0796100D5DE00 /* DirectorCaller.mm in Sources */,
+				2A4E708F1DC4EF5500E90562 /* NWFileHelper.cpp in Sources */,
 				2A87A5C71DC1E7B10040F061 /* TestDrawNode.cpp in Sources */,
 				2ABEE13C1DBF6B3400D5DE00 /* CC3Foundation.m in Sources */,
 				2ABEE1431DBF6B3400D5DE00 /* CC3Math.m in Sources */,

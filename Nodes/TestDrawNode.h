@@ -29,8 +29,8 @@ protected:
     bool initWithColor(const NWFloatColor& color);
 
 private:
-//    NWVector3       _verties[4];
-//    NWFloatColor    _colors[4];
+    NWVector3       _verties[4];
+    NWFloatColor    _colors[4];
 
 };
 

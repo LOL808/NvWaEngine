@@ -15,8 +15,9 @@ Node* Node::create() {
 }
 
 
-Node::Node():_glProgarm(nullptr),_nodeSize(NWSizeMake(0, 0)){
+Node::Node():_glProgarm(nullptr),_nodeSize(NWSizeMake(0, 0)),_origin(NWPointMake(0, 0)){
     _glProgarm = NWGLProgram::create();
+    NWMath_modelView(&_modelView, nullptr, nullptr, nullptr);
 }
 
 Node::~Node(){

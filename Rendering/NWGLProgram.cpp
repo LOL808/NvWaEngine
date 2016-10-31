@@ -22,11 +22,12 @@ const char* s_vsh =
 "attribute vec4 Position;\
 attribute vec4 SourceColor;\
 \
+uniform mat4 ModelView;\
 uniform mat4 Projection;\
 varying vec4 DestColor;\
 void main(void) {\
 DestColor = SourceColor;\
-gl_Position = Projection*Position;\
+gl_Position = Projection*ModelView*Position;\
 }";
 
 
@@ -57,7 +58,9 @@ bool NWGLProgram::initWithShaders(const char *vshContent, const char *fshContent
         _colorSlot = glGetAttribLocation(_program, "SourceColor");
 
         _projectionUniform = glGetUniformLocation(_program, "Projection");
-//
+        _modeViewUniform = glGetUniformLocation(_program, "ModelView");
+
+        glEnableVertexAttribArray(_modeViewUniform);
         glEnableVertexAttribArray(_projectionUniform);
         glEnableVertexAttribArray(_positionSlot);
         glEnableVertexAttribArray(_colorSlot);

@@ -53,31 +53,35 @@ Director::~Director() {
 
 Director::Director() {
 
+//    FileHelper::getInstance()->appendPath("ab/", "cd");
     FileHelper::getInstance();
-
-
 }
 
 
 void Director::mainLoop() {
 //    cout<<"C++ thread id : "<<std::this_thread::get_id()<<endl;
-//    testFoo();
-    
+    testFoo();
 }
 
 bool first = true;
 void Director::testFoo() {
     if (first) {
         first = false;
-        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 0, 1.0, 1.0));
-//        _testNode->testFoo(100, 100, 50, 50);
+
+
+        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 0, 0.0, 1.0),NWSizeMake(100,100));
+        _testNode->testFoo(1, 1, 50, 50);
+
+//        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0, 1, 0.0, 0.0));
+//        _testNode->testFoo(, 1, 50, 50);
+
     }
 
     glClearColor(0.8, 0.8, 0.8, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
     _testNode->draw();
-
+//    _testNode1->draw();
     _glview->draw();
 //
 
@@ -89,4 +93,9 @@ void Director::testFoo() {
 void Director::setGLView(GLViewImpl *glview) {
     _glview = glview;
 //    glViewport(0, 0, 300,300);
+}
+
+void Director::setUpProjectionMatrix(const float width, const float height) {
+    NWMath_OrthographicProjection(&_projectionMatrix, -width/2.0, width/2.0, -height/2.0, height/2.0, -128, 128);
+    _viewSize = NWSizeMake(width, height);
 }

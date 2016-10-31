@@ -9,6 +9,8 @@
 #ifndef _NVWA_ENGINE_UTILS_NWFILEHELPER_
 #define _NVWA_ENGINE_UTILS_NWFILEHELPER_
 
+#include "NWData.h"
+
 enum NW_FILETYPE {
     NW_FILETYPE_PNG,
     NW_FILETYPE_TXT
@@ -16,12 +18,21 @@ enum NW_FILETYPE {
 
 class FileHelper final {
 public:
+
     static FileHelper* getInstance();
-    
+
+    NWData* getData(const char* filename);
+
+    char* appendPath(char* former, char* later);
+
+
 private:
 
     FileHelper();
     ~FileHelper();
+
+private:
+
 
     static FileHelper* _instance;
 

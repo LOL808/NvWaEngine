@@ -22,6 +22,7 @@ typedef struct NWPoint {
     GLfloat y;
 }NWPoint;
 
+
 typedef struct NWSize {
     GLfloat width;
     GLfloat height;
@@ -31,6 +32,8 @@ typedef struct NWRect{
     NWPoint origin;
     NWSize  size;
 }NWRect;
+
+typedef NWPoint NWVector2;
 
 typedef struct NWVector3{
     GLfloat x;

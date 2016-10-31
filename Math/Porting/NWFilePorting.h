@@ -6,13 +6,9 @@
 //  Copyright © 2016 /help. All rights reserved.
 //
 
-#ifndef _NVWA_ENGINE_PORTING_NWFILEPORTING_H_
-#define _NVWA_ENGINE_PORTING_NWFILEPORTING_H_
-
-
+#ifndef _NVWA_ENGINE_PLATFORM_IOS_NWFILEPORTING_iOS_H_
+#define _NVWA_ENGINE_PLATFORM_IOS_NWFILEPORTING_iOS_H_
 
 char* NWFilePorting_getBundlePath();
-
-char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize);
 
 #endif /* NWFilePorting_iOS_hpp */

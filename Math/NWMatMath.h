@@ -16,7 +16,7 @@
 #define DegreesToRadians(D) ((D) * DegreesToRadiansFactor)
 #define RadiansToDegrees(R) ((R) * RadiansToDegreesFactor)
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -41,7 +41,7 @@ extern "C" {
     NWMat4* rotateAroundZ(NWMat4* matOutput, float degrees);
 
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 

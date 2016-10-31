@@ -24,6 +24,8 @@ public:
     void setGLView(GLViewImpl* glview);
     GLViewImpl* getGLViewImpl() {return _glview;}
 
+    void setUpProjectionMatrix(const float width , const float height);
+    NWMat4 getProjectionMatrix() {return _projectionMatrix;}
     void mainLoop();
 
     void testFoo();
@@ -38,7 +40,9 @@ protected:
 
 private:
     TestDrawNode* _testNode;
+    TestDrawNode* _testNode1;
     NWSize _viewSize;
+    NWMat4 _projectionMatrix;
 //    GLuint _posSlot;
 //    GLuint _colorSlot;
     GLViewImpl* _glview;

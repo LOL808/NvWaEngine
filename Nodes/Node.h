@@ -15,6 +15,7 @@
 #include "../Rendering/NWGLProgram.h"
 
 
+
 class Node {
 public:
     static Node* create();
@@ -26,8 +27,11 @@ protected:
     Node();
     virtual ~Node();
 
-    NWGLProgram* _glProgarm;
-    NWSize      _nodeSize;
+    NWMat4          _modelView;
+
+    NWGLProgram*    _glProgarm;
+    NWSize          _nodeSize;
+    NWPoint         _origin;
 };
 
 #endif /* Node_hpp */

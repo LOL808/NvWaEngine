@@ -16,9 +16,10 @@
 class TestDrawNode : public Node {
 
 public:
-    static TestDrawNode* createWithColorAndSize(const NWFloatColor& color);
+    static TestDrawNode* createWithColorAndSize(const NWFloatColor& color,const NWSize& size);
 
     TestDrawNode();
+    TestDrawNode(const NWFloatColor& color, const NWSize& size);
     virtual ~TestDrawNode();
 
     void testFoo(float x, float y, float w, float h);
@@ -29,8 +30,10 @@ protected:
     bool initWithColor(const NWFloatColor& color);
 
 private:
-    NWVector3       _verties[4];
-    NWFloatColor    _colors[4];
+//    NWVector3       _verties[4];
+//    NWFloatColor    _colors[4];
+
+    NWBaiscVertex   _verties[4];
 
 };
 

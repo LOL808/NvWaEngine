@@ -8,13 +8,15 @@
 
 #include "NWFileHelper.h"
 #include "../Porting/NWFilePorting.h"
+#include <string.h>
+#include <stdlib.h>
 
 FileHelper* FileHelper::_instance = nullptr;
 
 
 FileHelper* FileHelper::getInstance() {
     if (!_instance) {
-        _instance = new FileHelper;
+        _instance = new FileHelper();
     }
     return _instance;
 }
@@ -31,4 +33,14 @@ FileHelper::~FileHelper() {
     if (_bundlePath) {
         delete _bundlePath;
     }
+}
+
+char* FileHelper::appendPath(char *former, char *later) {
+    size_t lenF = strlen(former);
+    size_t lenL = strlen(later);
+    char* ret = (char*)calloc(sizeof(char), lenF+lenL+2);
+    strncpy(ret, former, lenF);
+    ret[lenF] = '/';
+    strncpy(ret+lenL+1, later, lenF);
+    return ret;
 }

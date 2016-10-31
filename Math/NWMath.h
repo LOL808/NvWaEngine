@@ -31,7 +31,7 @@ extern "C" {
 //                                       GLfloat near,
 //                                       GLfloat far);
 
-    void NWMath_modelView(NWMat4 *mat4, NWVector3 *translation, NWVector3* rotation, NWVector3 scale);
+    void NWMath_modelView(NWMat4 *mat4, NWVector3 *translation, NWVector3* rotation, NWVector3* scale);
 
     NWBitColor NWBitColorMake(NW_uchar r, NW_uchar g, NW_uchar b, NW_uchar a);
 
@@ -40,6 +40,10 @@ extern "C" {
     NWFloatColor NWBitColorToNWFloatColor(NWBitColor* bitColor, NWFloatColor* floatColor);
 
     NWSize NWSizeMake(GLfloat width, GLfloat height);
+
+    NWPoint NWPointMake(GLfloat x, GLfloat y);
+
+    NWVector3 NWVector3Make(GLfloat x, GLfloat y, GLfloat z);
 
 #ifdef __cplusplus
 }

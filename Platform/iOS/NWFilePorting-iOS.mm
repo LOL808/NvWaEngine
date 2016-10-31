@@ -16,7 +16,9 @@ char* NWFilePorting_getBundlePath() {
 }
 
 
-char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize) {
+unsigned char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize) {
+
+    unsigned char* buff;
 
     FILE* fp  = fopen(fullPath, "rb");
 
@@ -26,6 +28,23 @@ char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize) 
 
     fseek(fp, 0, SEEK_END);
     *outSize = (size_t)ftell(fp);
+    fseek(fp, 0, SEEK_SET);
 
-    return NULL;
+    size_t mallocSize = *outSize;
+
+    if (isText) {
+        mallocSize++;
+    }
+
+    buff = (unsigned char*)calloc(sizeof(unsigned char), mallocSize);
+
+    if (!buff) {
+        fclose(fp);
+        return NULL;
+    }
+
+    fread(buff, sizeof(unsigned char), *outSize, fp);
+    fclose(fp);
+
+    return buff;
 }

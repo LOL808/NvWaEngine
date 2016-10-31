@@ -20,6 +20,8 @@
 		2A4E709B1DC4F74A00E90562 /* NWData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4E70991DC4F74A00E90562 /* NWData.h */; };
 		2A4E70A81DC4FEA400E90562 /* NWFilePorting-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E70A71DC4FEA400E90562 /* NWFilePorting-iOS.mm */; };
 		2A4E70AC1DC646FF00E90562 /* NWFilePorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4E70AB1DC646FF00E90562 /* NWFilePorting.h */; };
+		2A4E70B71DC7122B00E90562 /* NWResolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E70B51DC7122B00E90562 /* NWResolution.cpp */; };
+		2A4E70B81DC7122B00E90562 /* NWResolution.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4E70B61DC7122B00E90562 /* NWResolution.h */; };
 		2A5997C51DC0A6B3006B83BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5997C11DC0A669006B83BB /* Foundation.framework */; };
 		2A71AD3C1DC352B200C1021B /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A71AD3B1DC352B200C1021B /* libpng.a */; };
 		2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B21DC1AA710040F061 /* Node.cpp */; };
@@ -54,8 +56,6 @@
 		2ABEE14D1DC0796100D5DE00 /* DirectorCaller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */; };
 		2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */; };
 		2AFCD6931DC0803B0094116F /* Game-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCD6921DC0803B0094116F /* Game-iOS.mm */; };
-		2AFCD69D1DC08FFA0094116F /* RenderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */; };
-		2AFCD69E1DC08FFA0094116F /* RenderTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFCD69C1DC08FFA0094116F /* RenderTest.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +73,8 @@
 		2A4E70991DC4F74A00E90562 /* NWData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWData.h; sourceTree = SOURCE_ROOT; };
 		2A4E70A71DC4FEA400E90562 /* NWFilePorting-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NWFilePorting-iOS.mm"; sourceTree = "<group>"; };
 		2A4E70AB1DC646FF00E90562 /* NWFilePorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWFilePorting.h; sourceTree = "<group>"; };
+		2A4E70B51DC7122B00E90562 /* NWResolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NWResolution.cpp; path = Core/NWResolution.cpp; sourceTree = SOURCE_ROOT; };
+		2A4E70B61DC7122B00E90562 /* NWResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NWResolution.h; path = Core/NWResolution.h; sourceTree = SOURCE_ROOT; };
 		2A5997C11DC0A669006B83BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A5997C31DC0A692006B83BB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2A6234351DBDCBCD004152BA /* libNvWaEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNvWaEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +113,6 @@
 		2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DirectorCaller.mm; sourceTree = "<group>"; };
 		2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorCaller.h; sourceTree = "<group>"; };
 		2AFCD6921DC0803B0094116F /* Game-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Game-iOS.mm"; sourceTree = "<group>"; };
-		2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderTest.cpp; path = Core/RenderTest.cpp; sourceTree = SOURCE_ROOT; };
-		2AFCD69C1DC08FFA0094116F /* RenderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderTest.h; path = Core/RenderTest.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +179,8 @@
 				2A92654A1DBDCFF8005302A5 /* GameProtocol.h */,
 				2A0437D11DBE4C5000ACBAD2 /* Director.cpp */,
 				2A0437D21DBE4C5000ACBAD2 /* Director.h */,
-				2AFCD69B1DC08FFA0094116F /* RenderTest.cpp */,
-				2AFCD69C1DC08FFA0094116F /* RenderTest.h */,
+				2A4E70B51DC7122B00E90562 /* NWResolution.cpp */,
+				2A4E70B61DC7122B00E90562 /* NWResolution.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -294,7 +294,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AFCD69E1DC08FFA0094116F /* RenderTest.h in Headers */,
 				2A87A5C21DC1AF690040F061 /* NWGLProgram.h in Headers */,
 				2A87A5C41DC1D0590040F061 /* NWMacro.h in Headers */,
 				2A0437D41DBE4C5000ACBAD2 /* Director.h in Headers */,
@@ -315,6 +314,7 @@
 				2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */,
 				2A4E70901DC4EF5500E90562 /* NWFileHelper.h in Headers */,
 				2ABEE1401DBF6B3400D5DE00 /* CC3Kazmath.h in Headers */,
+				2A4E70B81DC7122B00E90562 /* NWResolution.h in Headers */,
 				2A92655A1DBDD379005302A5 /* Logger.h in Headers */,
 				2ABEE1281DBF1CD600D5DE00 /* PlatformDefine.h in Headers */,
 				2ABEE12C1DBF215500D5DE00 /* NWMath.h in Headers */,
@@ -389,9 +389,9 @@
 				2ABEE13C1DBF6B3400D5DE00 /* CC3Foundation.m in Sources */,
 				2ABEE1431DBF6B3400D5DE00 /* CC3Math.m in Sources */,
 				2A0437D31DBE4C5000ACBAD2 /* Director.cpp in Sources */,
-				2AFCD69D1DC08FFA0094116F /* RenderTest.cpp in Sources */,
 				2ABEE13E1DBF6B3400D5DE00 /* CC3GLMatrix.m in Sources */,
 				2A87A5B91DC1AC660040F061 /* NWGLProgramCache.cpp in Sources */,
+				2A4E70B71DC7122B00E90562 /* NWResolution.cpp in Sources */,
 				2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */,
 				2A0437DB1DBE500700ACBAD2 /* GLViewImpl-iOS.mm in Sources */,
 				2ABEE13F1DBF6B3400D5DE00 /* CC3Kazmath.c in Sources */,

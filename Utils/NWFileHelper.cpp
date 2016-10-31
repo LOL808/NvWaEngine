@@ -10,6 +10,7 @@
 #include "../Porting/NWFilePorting.h"
 #include <string.h>
 #include <stdlib.h>
+#include <string>
 
 FileHelper* FileHelper::_instance = nullptr;
 
@@ -35,12 +36,24 @@ FileHelper::~FileHelper() {
     }
 }
 
-char* FileHelper::appendPath(char *former, char *later) {
+NWData* FileHelper::getData(const char* filename, bool isText) {
+
+    char* fullpath;
+    fullpath = appendPath(_bundlePath, filename);
+    size_t size=0;
+    unsigned char* data = NWFilePorting_getData(fullpath, isText, &size);
+    NWData* nwData = new NWData(data, size);
+    return nwData;
+}
+
+char* FileHelper::appendPath(const char *former,const char *later) {
     size_t lenF = strlen(former);
     size_t lenL = strlen(later);
     char* ret = (char*)calloc(sizeof(char), lenF+lenL+2);
     strncpy(ret, former, lenF);
     ret[lenF] = '/';
-    strncpy(ret+lenL+1, later, lenF);
+    strncpy(ret+lenF+1, later, lenL);
     return ret;
 }
+
+

@@ -33,7 +33,11 @@ private:
 //    NWVector3       _verties[4];
 //    NWFloatColor    _colors[4];
 
-    NWBaiscVertex   _verties[4];
+    
+
+//    GLuint          _vertexBuffer;
+
+    bool            _isDirty;
 
 };
 

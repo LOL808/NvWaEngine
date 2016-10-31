@@ -13,6 +13,6 @@
 
 char* NWFilePorting_getBundlePath();
 
-char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize);
+unsigned char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *outSize);
 
 #endif /* NWFilePorting_iOS_hpp */

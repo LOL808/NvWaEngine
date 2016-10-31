@@ -21,9 +21,9 @@ public:
 
     static FileHelper* getInstance();
 
-    NWData* getData(const char* filename);
+    NWData* getData(const char* filename, bool isText);
 
-    char* appendPath(char* former, char* later);
+    char* appendPath(const char* former,const char* later);
 
 
 private:

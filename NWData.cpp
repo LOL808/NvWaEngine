@@ -22,7 +22,7 @@ NWData::~NWData() {
     _len = 0;
 }
 
-NWData::NWData(char* buffer, size_t len):_haveBOM(false) {
+NWData::NWData(unsigned char* buffer, size_t len):_haveBOM(false) {
 //    _data = (char*)calloc(sizeof(char*), len);
     _data = buffer;
     _len = len;

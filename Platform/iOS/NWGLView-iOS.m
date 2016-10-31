@@ -68,7 +68,7 @@
 - (void)render {
 //    glClearColor(1.0, 0.0, 0.0, 1.0);
 //    glClear(GL_COLOR_BUFFER_BIT);
-    glViewport(0, 0, self.frame.size.width, self.frame.size.height);
+//    glViewport(0, 0, self.frame.size.width, self.frame.size.height);
 //    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, 0);
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }

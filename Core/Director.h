@@ -41,6 +41,8 @@ protected:
 private:
     TestDrawNode* _testNode;
     TestDrawNode* _testNode1;
+    TestDrawNode* _testNode2;
+
     NWSize _viewSize;
     NWMat4 _projectionMatrix;
 //    GLuint _posSlot;

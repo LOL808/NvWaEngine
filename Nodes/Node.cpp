@@ -15,9 +15,24 @@ Node* Node::create() {
 }
 
 
-Node::Node():_glProgarm(nullptr),_nodeSize(NWSizeMake(0, 0)),_origin(NWPointMake(0, 0)){
+Node::Node():
+    _glProgarm(nullptr),
+    _nodeSize(NWSizeMake(0, 0)),
+    _origin(NWPointMake(0, 0)),
+    _isVertextDirty(true),
+    _isModelViewDirty(true)
+    {
     _glProgarm = NWGLProgram::create();
     NWMath_modelView(&_modelView, nullptr, nullptr, nullptr);
+}
+
+void Node::setPosition(const NWVector2 &vec) {
+    _origin.x = vec.x;
+    _origin.y = vec.y;
+
+    _modelView.mat[12] = vec.x;
+    _modelView.mat[13] = vec.y;
+
 }
 
 Node::~Node(){

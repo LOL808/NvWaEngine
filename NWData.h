@@ -18,14 +18,14 @@
 class NWData {
 public:
     NWData();
-    NWData(char* data, size_t size);
+    NWData(unsigned char* data, size_t size);
     ~NWData();
 
     void setBOM(bool bom) {_haveBOM = bom;}
 
     bool getBOM() {return _haveBOM;}
 
-    char* getData() {return _haveBOM? _data+3:_data; }
+    unsigned char* getData() {return _haveBOM? _data+3:_data; }
 
     size_t getLen() {return _haveBOM? _len-3:_len;}
 
@@ -33,7 +33,7 @@ private:
 
     bool    _haveBOM;
     size_t  _len;
-    char*   _data;
+    unsigned char*   _data;
 
 };
 

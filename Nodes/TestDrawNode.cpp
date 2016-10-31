@@ -67,21 +67,21 @@ bool TestDrawNode::initWithColor(const NWFloatColor &color) {
 //    _colors[0] = _colors[1] = _colors[2] = _colors[3] = color;
 ////    for (int i=0; i<4; i++) {
 //        _colors[i] = color;
-//    }
+////    }
+//    GLuint vertexBuffer;
+    glGenBuffers(1, &_vertexBuffer);
+
 
     return true;
 }
 
 void TestDrawNode::draw() {
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(_verties), _verties, GL_STATIC_DRAW);
 
-    GLuint indexBuffer;
-    glGenBuffers(1, &indexBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(DIndices), DIndices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
+    if (_isVertextDirty) {
+         glBufferData(GL_ARRAY_BUFFER, sizeof(_verties), _verties, GL_DYNAMIC_DRAW);
+        _isVertextDirty = false;
+    }
 
 
     glUniformMatrix4fv(_glProgarm->getModelViewSlot(), 1, GL_FALSE, _modelView.mat);
@@ -91,9 +91,6 @@ void TestDrawNode::draw() {
     glVertexAttribPointer(_glProgarm->getColorSlot(), 4, GL_FLOAT, GL_FALSE,
                           sizeof(NWBaiscVertex), (GLvoid*) (sizeof(float) * 3));
 
-    // 3
-//    glDrawElements(GL_TRIANGLES, sizeof(DIndices)/sizeof(DIndices[0]),
-//                   GL_UNSIGNED_BYTE, 0);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 

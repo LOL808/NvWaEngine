@@ -20,7 +20,12 @@ class Node {
 public:
     static Node* create();
     static Node* createWithSize(NWSize size);
+
+
     virtual void draw();
+
+    void setPosition(const NWVector2& vec);
+
 
 protected:
 
@@ -28,10 +33,16 @@ protected:
     virtual ~Node();
 
     NWMat4          _modelView;
-
     NWGLProgram*    _glProgarm;
+    GLuint          _vertexBuffer;
+    NWBaiscVertex   _verties[4];
+
     NWSize          _nodeSize;
     NWPoint         _origin;
+
+    bool            _isModelViewDirty;
+    bool            _isVertextDirty;
+
 };
 
 #endif /* Node_hpp */

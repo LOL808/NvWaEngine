@@ -53,8 +53,8 @@ Director::~Director() {
 
 Director::Director() {
 
-//    FileHelper::getInstance()->appendPath("ab/", "cd");
-    FileHelper::getInstance();
+    FileHelper::getInstance()->appendPath("ab/", "cd");
+    FileHelper::getInstance()->getData("test.txt", true);
 }
 
 
@@ -67,21 +67,28 @@ bool first = true;
 void Director::testFoo() {
     if (first) {
         first = false;
+        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0,0.0, 1.0, 1.0),NWSizeMake(100,100));
+        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 1, 0.0, 1.0),NWSizeMake(100,100));
+        _testNode1->setPosition(NWPointMake(200, 200));
 
-
-        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 0, 0.0, 1.0),NWSizeMake(100,100));
-        _testNode->testFoo(1, 1, 50, 50);
-
-//        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0, 1, 0.0, 0.0));
+        _testNode2 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0, 1, 0.0, 1.0),NWSizeMake(100,100));
 //        _testNode->testFoo(, 1, 50, 50);
+        _testNode2->setPosition(NWPointMake(50,200));
+        _testNode->setPosition(NWPointMake(50, 50));
+        glViewport(0, 0, _viewSize.width, _viewSize.height);
 
+//        _testNode->draw();
+//         _testNode2->draw();
+//        _testNode1->draw();
+//        _glview->draw();
     }
 
     glClearColor(0.8, 0.8, 0.8, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-
+    
     _testNode->draw();
-//    _testNode1->draw();
+    _testNode2->draw();
+    _testNode1->draw();
     _glview->draw();
 //
 
@@ -96,6 +103,6 @@ void Director::setGLView(GLViewImpl *glview) {
 }
 
 void Director::setUpProjectionMatrix(const float width, const float height) {
-    NWMath_OrthographicProjection(&_projectionMatrix, -width/2.0, width/2.0, -height/2.0, height/2.0, -128, 128);
+    NWMath_OrthographicProjection(&_projectionMatrix, 0, width, 0, height, -128, 128);
     _viewSize = NWSizeMake(width, height);
 }

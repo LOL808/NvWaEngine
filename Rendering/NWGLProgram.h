@@ -22,6 +22,8 @@ public:
     GLuint getColorSlot() {return  _colorSlot;}
     GLuint getProjectionSlot() {return _projectionUniform;}
     GLuint getModelViewSlot() {return _modeViewUniform;}
+    GLuint getProgram() {return _program;}
+
 
 protected:
 

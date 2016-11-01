@@ -41,7 +41,7 @@ extern "C" {
     NWMat4* rotateAroundZ(NWMat4* matOutput, float degrees);
 
 
-#ifdef __cplusplus
+#ifdef __cplusplus 
 }
 #endif
 

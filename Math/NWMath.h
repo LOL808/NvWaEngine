@@ -23,13 +23,13 @@ extern "C" {
                                        GLfloat near,
                                        GLfloat far);
 
-//    void NWMath_PerspectiveProjection(NWMat4 *mat4,
-//                                       GLfloat left,
-//                                       GLfloat right,
-//                                       GLfloat bottom,
-//                                       GLfloat top,
-//                                       GLfloat near,
-//                                       GLfloat far);
+    void NWMath_PerspectiveProjection(NWMat4 *mat4,
+                                       GLfloat left,
+                                       GLfloat right,
+                                       GLfloat bottom,
+                                       GLfloat top,
+                                       GLfloat near,
+                                       GLfloat far);
 
     void NWMath_modelView(NWMat4 *mat4, NWVector3 *translation, NWVector3* rotation, NWVector3* scale);
 

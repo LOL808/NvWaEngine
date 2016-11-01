@@ -8,6 +8,7 @@
 
 #include "Node.h"
 #include "../Math/NWMath.h"
+#include <memory.h>
 
 
 Node* Node::create() {
@@ -20,10 +21,14 @@ Node::Node():
     _nodeSize(NWSizeMake(0, 0)),
     _origin(NWPointMake(0, 0)),
     _isVertextDirty(true),
-    _isModelViewDirty(true)
+    _isModelViewDirty(true),
+    _rataion(0)
     {
     _glProgarm = NWGLProgram::create();
     NWMath_modelView(&_modelView, nullptr, nullptr, nullptr);
+
+//    _origin.x = _modelView
+
 }
 
 void Node::setPosition(const NWVector2 &vec) {
@@ -32,7 +37,20 @@ void Node::setPosition(const NWVector2 &vec) {
 
     _modelView.mat[12] = vec.x;
     _modelView.mat[13] = vec.y;
+    _isVertextDirty = true;
+}
 
+void Node::setRotation(float degree) {
+//    rotateAroundZ(&_modelView, degree);
+    NWMat4 temp;
+    rotateAroundZ(&temp, degree);
+    NWMat4 rlt;
+    matMultiply(&rlt, &_modelView, &temp);
+
+    memcpy((void*)&_modelView, (void*)&rlt, sizeof(NWMat4));
+
+    _rataion = degree;
+    _isModelViewDirty = true;
 }
 
 Node::~Node(){

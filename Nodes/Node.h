@@ -12,6 +12,7 @@
 //#include "../Math/NWTypes.h"
 #include <stdlib.h>
 #include "../Math/NWMath.h"
+#include "../Math/NWMatMath.h"
 #include "../Rendering/NWGLProgram.h"
 
 
@@ -25,7 +26,10 @@ public:
     virtual void draw();
 
     void setPosition(const NWVector2& vec);
+    void setRotation(float degree);
 
+    float getRotation() {return _rataion;}
+//    void setRotationY()
 
 protected:
 
@@ -42,6 +46,8 @@ protected:
 
     bool            _isModelViewDirty;
     bool            _isVertextDirty;
+
+    float           _rataion;
 
 };
 

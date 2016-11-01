@@ -102,12 +102,30 @@ NWVector3 NWVector3Make(GLfloat x, GLfloat y, GLfloat z) {
     vec3.z = z;
     return vec3;
 }
-//void NWMath_PerspectiveProjection(NWMat4 *mat4,
-//                                  GLfloat left,
-//                                  GLfloat right,
-//                                  GLfloat bottom,
-//                                  GLfloat top,
-//                                  GLfloat near,
-//                                  GLfloat far) {
-//
-//}
+void NWMath_PerspectiveProjection(NWMat4 *mat4,
+                                  GLfloat left,
+                                  GLfloat right,
+                                  GLfloat bottom,
+                                  GLfloat top,
+                                  GLfloat near,
+                                  GLfloat far) {
+    mat4->mat[0] = 2.0/(right-left);
+    mat4->mat[1] = 0.0;
+    mat4->mat[2] = 0.0;
+    mat4->mat[3] = 0.0;
+
+    mat4->mat[4] = 0.0;
+    mat4->mat[5] = 2.0/(top-bottom);
+    mat4->mat[6] = 0.0;
+    mat4->mat[7] = 0.0;
+
+    mat4->mat[8] = 0.0;
+    mat4->mat[9] = 0.0;
+    mat4->mat[10] = -2.0/(far-near);
+    mat4->mat[11] = 0.0;
+
+    mat4->mat[12] = -(right+left)/(right-left);
+    mat4->mat[13] = -(top+bottom)/(top-bottom);
+    mat4->mat[14] = -(far+near)/(far-near);
+    mat4->mat[15] = 1.0;
+}

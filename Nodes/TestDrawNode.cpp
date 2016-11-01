@@ -11,22 +11,6 @@
 #include "NWMath.h"
 #include "../Core/Director.h"
 
-typedef struct{
-    float Position[3];
-    float Color[4];
-}Vertex;
-
-const Vertex DVertices[] ={
-    {{1, -1, 0}, {1, 0, 0, 1}},
-    {{1, 1, 0}, {0, 1, 0, 1}},
-    {{-1, 1, 0}, {0, 0, 1, 1}},
-    {{-1, -1, 0}, {0, 0, 0, 1}}
-};
-
-const GLubyte DIndices[] = {
-    0, 1, 2,
-    2, 3, 0
-};
 
 TestDrawNode* TestDrawNode::createWithColorAndSize(const NWFloatColor& color,const NWSize& size) {
     TestDrawNode* pRet = new TestDrawNode(color, size);
@@ -85,6 +69,7 @@ void TestDrawNode::draw() {
 
 
     glUniformMatrix4fv(_glProgarm->getModelViewSlot(), 1, GL_FALSE, _modelView.mat);
+
     glUniformMatrix4fv(_glProgarm->getProjectionSlot(), 1, GL_FALSE, Director::getInstance()->getProjectionMatrix().mat);
     glVertexAttribPointer(_glProgarm->getPositionSlot(), 3, GL_FLOAT, GL_FALSE,
                           sizeof(NWBaiscVertex), 0);
@@ -92,13 +77,6 @@ void TestDrawNode::draw() {
                           sizeof(NWBaiscVertex), (GLvoid*) (sizeof(float) * 3));
 
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-}
-
-void TestDrawNode::testFoo(float x, float y, float w, float h) {
-//    /  glViewport(x, y, w, h);
-//    _modelView->mat[12]=x;
-//    _modelView->mat[13]=y;
-
 }
 
 

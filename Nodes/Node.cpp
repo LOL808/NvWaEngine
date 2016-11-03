@@ -53,6 +53,11 @@ void Node::setRotation(float degree) {
     _isModelViewDirty = true;
 }
 
+void Node::setColor(const NWFloatColor &color) {
+    _verties[0].color = _verties[1].color = _verties[2].color = _verties[3].color = color;
+    _isVertextDirty = true;
+}
+
 Node::~Node(){
     
 }

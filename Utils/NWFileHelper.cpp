@@ -36,14 +36,22 @@ FileHelper::~FileHelper() {
     }
 }
 
-NWData* FileHelper::getData(const char* filename, bool isText) {
+NWData* FileHelper::getData(NW_FILETYPE type, const char* filename, bool isText) {
 
     char* fullpath;
     fullpath = appendPath(_bundlePath, filename);
     size_t size=0;
     unsigned char* data = NWFilePorting_getData(fullpath, isText, &size);
-    NWData* nwData = new NWData(data, size);
-    return nwData;
+
+
+    if (data) {
+        NWData* nwData = new NWData(data, size);
+        if (isText && 239==data[0] && 187==data[1] && 191 ==data[2]) {
+            nwData->setBOM(true);
+        }
+        return nwData;
+    }
+    return nullptr;
 }
 
 char* FileHelper::appendPath(const char *former,const char *later) {

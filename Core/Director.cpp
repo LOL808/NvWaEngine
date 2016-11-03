@@ -57,18 +57,19 @@ Director::~Director() {
 Director::Director() {
 
     FileHelper::getInstance()->appendPath("ab/", "cd");
-    FileHelper::getInstance()->getData("test.txt", true);
+    FileHelper::getInstance()->getData(NW_FILETYPE_TXT,"test.txt", true);
 }
 
 
 void Director::mainLoop() {
 //    cout<<"C++ thread id : "<<std::this_thread::get_id()<<endl;
     testFoo();
-    this_thread::sleep_for(chrono::milliseconds(200));
+    this_thread::sleep_for(chrono::milliseconds(20));
 //    sleep(1000);
 }
 
 bool first = true;
+int deg = 0.0f;
 void Director::testFoo() {
     if (first) {
         first = false;
@@ -95,7 +96,9 @@ void Director::testFoo() {
 
     _testNode->draw();
     _testNode2->draw();
-//    _testNode1->setRotation(_testNode1->getRotation()+0.1);
+    _testNode2->setColor(NWFloatColorMake(1, 0.8, 0.8, 1.0));
+    _testNode1->setRotation(deg);
+    deg = (deg+1)%360;
     _testNode1->draw();
     _glview->draw();
 //

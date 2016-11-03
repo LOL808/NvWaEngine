@@ -17,6 +17,7 @@ class TestDrawNode : public Node {
 
 public:
     static TestDrawNode* createWithColorAndSize(const NWFloatColor& color,const NWSize& size);
+    static TestDrawNode* createWithSprite(const char* filename);
 
     TestDrawNode();
     TestDrawNode(const NWFloatColor& color, const NWSize& size);

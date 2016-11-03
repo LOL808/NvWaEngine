@@ -29,6 +29,8 @@ public:
     void setRotation(float degree);
 
     float getRotation() {return _rataion;}
+
+    void setColor(const NWFloatColor& color);
 //    void setRotationY()
 
 protected:

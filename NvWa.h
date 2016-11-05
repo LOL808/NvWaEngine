@@ -31,9 +31,14 @@
 //#include "Logger.h"
 
 
+//Texture
+#include "Texture/NWTexture.h"
+
 //NODES
 #include "Nodes/Node.h"
 #include "Nodes/TestDrawNode.h"
+
+
 
 //FILE
 #include "Utils/NWFileHelper.h"

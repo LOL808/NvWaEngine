@@ -31,7 +31,7 @@ private:
     FileHelper();
     ~FileHelper();
 
-private:
+public:
 
 
     static FileHelper* _instance;

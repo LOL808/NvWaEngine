@@ -18,11 +18,17 @@ public:
     static NWGLProgram* create();
     static NWGLProgram* create(const char* vshContent, const char* fshContent);
 
-    GLuint getPositionSlot() {return _positionSlot;}
-    GLuint getColorSlot() {return  _colorSlot;}
-    GLuint getProjectionSlot() {return _projectionUniform;}
-    GLuint getModelViewSlot() {return _modeViewUniform;}
+    GLint getPositionSlot() {return _positionSlot;}
+    GLint getColorSlot() {return  _colorSlot;}
+    GLint getProjectionSlot() {return _projectionUniform;}
+    GLint getModelViewSlot() {return _modeViewUniform;}
+    GLint getTexCoordSlot() {return _texCoordSlot;}
+    GLint getTextureUniformSlot() {return _textureUniform;}
+
+    GLint getAlphaUniform(void) {return _alphaUniform;};
+
     GLuint getProgram() {return _program;}
+
 
 
 protected:
@@ -40,14 +46,18 @@ private:
 
 
     GLuint _program;
-    GLuint _fshader;
-    GLuint _vshader;
+    GLint _fshader;
+    GLint _vshader;
 
-    GLuint _projectionUniform;
-    GLuint _modeViewUniform;
+    GLint _projectionUniform;
+    GLint _modeViewUniform;
 
-    GLuint _positionSlot;
-    GLuint _colorSlot;
+    GLint _positionSlot;
+    GLint _colorSlot;
+    GLint _texCoordSlot;
+    GLint _textureUniform;
+    GLint _alphaUniform;
+
 
 };
 

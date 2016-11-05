@@ -11,6 +11,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <string>
+#include "../Math/NWTypes.h"
 
 FileHelper* FileHelper::_instance = nullptr;
 
@@ -41,7 +42,7 @@ NWData* FileHelper::getData(NW_FILETYPE type, const char* filename, bool isText)
     char* fullpath;
     fullpath = appendPath(_bundlePath, filename);
     size_t size=0;
-    unsigned char* data = NWFilePorting_getData(fullpath, isText, &size);
+    NW_uchar* data = NWFilePorting_getData(fullpath, isText, &size);
 
 
     if (data) {

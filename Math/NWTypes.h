@@ -80,7 +80,7 @@ typedef struct NWTextVertex{
     NWVector3       position;
     NWFloatColor    color;
     NWTexCoord      texcoord;
-}NWTextVertex;
+}NWTexVertex;
 
 
 //

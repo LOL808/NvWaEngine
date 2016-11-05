@@ -11,11 +11,16 @@
 
 #include "Node.h"
 #include "../Math/NWTypes.h"
+#include "../Texture/NWTexture.h"
+#include "../Sprite/NWSpriteFrame.h"
+
+
 
 
 class TestDrawNode : public Node {
 
 public:
+    static TestDrawNode* createWithSpriteFrame(const NWSpriteFrame* spriteFrame);
     static TestDrawNode* createWithColorAndSize(const NWFloatColor& color,const NWSize& size);
     static TestDrawNode* createWithSprite(const char* filename);
 
@@ -27,10 +32,14 @@ public:
     void draw();
 
 protected:
+    bool initWithSpriteFrame(const NWSpriteFrame* spriteFrame);
     bool initWithColor(const NWFloatColor& color);
+    bool initWithFile(const char* filename);
 
 private:
 
+    NWSpriteFrame* _spriteFrame;
+    NWTexture       *m_texture;
 
 };
 

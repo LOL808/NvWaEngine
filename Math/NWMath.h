@@ -45,6 +45,8 @@ extern "C" {
 
     NWVector3 NWVector3Make(GLfloat x, GLfloat y, GLfloat z);
 
+    NWRect  NWRectMake(float x, float y, float width, float height);
+
 #ifdef __cplusplus
 }
 #endif

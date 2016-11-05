@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #include "../Porting/NWFilePorting.h"
+#include "../PlatformDefine.h"
 #include <stdio.h>
 
 char* NWFilePorting_getBundlePath() {
@@ -36,14 +37,14 @@ unsigned char* NWFilePorting_getData(const char* fullPath, bool isText, size_t *
         mallocSize++;
     }
 
-    buff = (unsigned char*)calloc(sizeof(unsigned char), mallocSize);
-
+    buff = (NW_uchar *)malloc(sizeof(NW_uchar)*mallocSize);
+    memset(buff, 0, mallocSize);
     if (!buff) {
         fclose(fp);
         return NULL;
     }
-
-    fread(buff, sizeof(unsigned char), *outSize, fp);
+    size_t nread;
+    nread = fread(buff, sizeof(NW_uchar), mallocSize, fp);
     fclose(fp);
 
     return buff;

@@ -10,25 +10,39 @@
 #include "NWMacro.h"
 #include <string.h>
 #include <stdio.h>
-//#include "../Math/NWTypes.h"
+#include "../Utils/NWFileHelper.h"
 
 
-const char* s_fsh ="varying lowp vec4 DestColor;\
-void main(void){\
-gl_FragColor = DestColor;\
-}";
-//uniform mat4 Projection
-const char* s_vsh =
-"attribute vec4 Position;\
+const char* s_vsh ="\
+attribute vec4 Position;\
 attribute vec4 SourceColor;\
+attribute vec2 TexCoordIn;\
 \
 uniform mat4 ModelView;\
 uniform mat4 Projection;\
 varying vec4 DestColor;\
+varying vec2 TexCoordOut;\
+\
 void main(void) {\
-DestColor = SourceColor;\
-gl_Position = Projection*ModelView*Position;\
+    DestColor   = SourceColor;\
+    gl_Position = Projection*ModelView*Position;\
+    TexCoordOut = TexCoordIn;\
 }";
+
+
+
+const char* s_fsh ="\
+precision lowp float;\
+\
+varying lowp vec4 DestColor;\
+varying lowp vec2 TexCoordOut;\
+uniform sampler2D Texture;\
+void main(void){\
+    gl_FragColor = texture2D(Texture,TexCoordOut)*DestColor;\
+}";
+//uniform mat4 Projection
+
+
 
 
 NWGLProgram* NWGLProgram::create() {
@@ -42,6 +56,9 @@ NWGLProgram* NWGLProgram::create() {
 }
 
 bool NWGLProgram::init() {
+
+//    NWData* vsh = FileHelper::getInstance()->getData(NW_FILETYPE_TXT, "",true);
+
     return initWithShaders(s_vsh, s_fsh);
 }
 
@@ -56,14 +73,24 @@ bool NWGLProgram::initWithShaders(const char *vshContent, const char *fshContent
 
         _positionSlot = glGetAttribLocation(_program, "Position");
         _colorSlot = glGetAttribLocation(_program, "SourceColor");
-
         _projectionUniform = glGetUniformLocation(_program, "Projection");
         _modeViewUniform = glGetUniformLocation(_program, "ModelView");
+        _texCoordSlot = glGetAttribLocation(_program, "TexCoordIn");
 
         glEnableVertexAttribArray(_modeViewUniform);
         glEnableVertexAttribArray(_projectionUniform);
         glEnableVertexAttribArray(_positionSlot);
         glEnableVertexAttribArray(_colorSlot);
+
+        _texCoordSlot = glGetAttribLocation(_program, "TexCoordIn");
+        if (_texCoordSlot >= 0) {
+            glEnableVertexAttribArray(_texCoordSlot);
+//
+            _textureUniform = glGetUniformLocation(_program, "Texture");
+        }
+
+//        _alphaUniform = glGetUniformLocation(_program, "AlphaValue");
+
 
         bRet = true;
     } while (0);

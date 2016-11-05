@@ -13,6 +13,8 @@
 #include "GLViewImpl-iOS.h"
 #include <chrono>
 #include <thread>
+#include <fstream>
+
 
 
 
@@ -56,16 +58,20 @@ Director::~Director() {
 
 Director::Director() {
 
-    FileHelper::getInstance()->appendPath("ab/", "cd");
-    FileHelper::getInstance()->getData(NW_FILETYPE_TXT,"test.txt", true);
+
+
+//    std::cout<<FileHelper::getInstance()->_bundlePath;
+
+    NWSpriteFrame* diamond = NWSpriteFrame::create("diamond.png");
+
+    _testNode = TestDrawNode::createWithSpriteFrame(diamond);
+    _testNode->setPosition(NWPointMake(100,100));
 }
 
 
 void Director::mainLoop() {
-//    cout<<"C++ thread id : "<<std::this_thread::get_id()<<endl;
     testFoo();
-    this_thread::sleep_for(chrono::milliseconds(20));
-//    sleep(1000);
+    this_thread::sleep_for(chrono::milliseconds(2000));
 }
 
 bool first = true;
@@ -73,21 +79,19 @@ int deg = 0.0f;
 void Director::testFoo() {
     if (first) {
         first = false;
-        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0,0.0, 1.0, 1.0),NWSizeMake(100,100));
-        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 1, 0.0, 1.0),NWSizeMake(100,100));
-        _testNode1->setPosition(NWPointMake(200, 200));
-
-        _testNode2 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0, 1, 0.0, 1.0),NWSizeMake(100,100));
-        _testNode2->setPosition(NWPointMake(50,200));
-        _testNode->setPosition(NWPointMake(50, 50));
-
-
-        _testNode->setRotation(0);
-        _testNode1->setRotation(-30);
-        _testNode2->setRotation(30);
-
+        //        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0,0.0, 1.0, 1.0),NWSizeMake(100,100));
+//        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 1, 0.0, 1.0),NWSizeMake(100,100));
+//        _testNode1->setPosition(NWPointMake(200, 200));
+//
+//        _testNode2 = TestDrawNode::createWithSprite("test.png");
+////        _testNode2->setPosition(NWPointMake(50,200));
+////        _testNode->setPosition(NWPointMake(50, 50));
+//        NWTexture* text = NWTexture::createWithFile("test.png");
+//
+//        _testNode->setRotation(0);
+//        _testNode1->setRotation(-30);
+//        _testNode2->setRotation(30);
         glViewport(0, 0, _viewSize.width, _viewSize.height);
-
     }
 
     glClearColor(0.8, 0.8, 0.8, 1.0f);
@@ -95,11 +99,7 @@ void Director::testFoo() {
 
 
     _testNode->draw();
-    _testNode2->draw();
-    _testNode2->setColor(NWFloatColorMake(1, 0.8, 0.8, 1.0));
-    _testNode1->setRotation(deg);
-    deg = (deg+1)%360;
-    _testNode1->draw();
+
     _glview->draw();
 //
 

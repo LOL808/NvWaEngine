@@ -129,3 +129,11 @@ void NWMath_PerspectiveProjection(NWMat4 *mat4,
     mat4->mat[14] = -(far+near)/(far-near);
     mat4->mat[15] = 1.0;
 }
+
+NWRect  NWRectMake(float x, float y, float width, float height) {
+    NWRect rect;
+    rect.origin = NWPointMake(x, y);
+    rect.size = NWSizeMake(width, height);
+
+    return rect;
+}

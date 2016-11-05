@@ -41,7 +41,7 @@ protected:
     NWMat4          _modelView;
     NWGLProgram*    _glProgarm;
     GLuint          _vertexBuffer;
-    NWBaiscVertex   _verties[4];
+    NWTexVertex     _verties[4];
 
     NWSize          _nodeSize;
     NWPoint         _origin;

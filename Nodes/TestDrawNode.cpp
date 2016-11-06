@@ -98,7 +98,8 @@ bool TestDrawNode::initWithSpriteFrame(const NWSpriteFrame *spriteFrame) {
     top = 1.0;
     bottom = 0.0;
 
-    _nodeSize = spriteFrame->_size;
+//    _nodeSize = spriteFrame->_size;
+    _nodeSize = NWSizeMake(100, 100);
 
     NWFloatColor color = NWFloatColorMake(1.0, 1.0, 1.0, 1.0);
     _verties[0].position = {-_nodeSize.width/2,_nodeSize.height/2,0};

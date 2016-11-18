@@ -21,13 +21,12 @@ class NWSpriteFrame{
     friend class TestDrawNode;
 public:
     static NWSpriteFrame* create(const char* filename);
-
 protected:
     bool init(const char* filename);
 
 private:
+     ~NWSpriteFrame();
     NWSpriteFrame(const char* filename);
-    ~NWSpriteFrame();
 private:
 
     NWRect _frame;

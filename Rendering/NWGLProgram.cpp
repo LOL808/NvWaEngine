@@ -40,8 +40,32 @@ uniform sampler2D Texture;\
 void main(void){\
     gl_FragColor = texture2D(Texture,TexCoordOut)*DestColor;\
 }";
+
+
 //uniform mat4 Projection
 
+const char* bs_vsh ="\
+attribute vec4 Position;\
+attribute vec4 SourceColor;\
+\
+uniform mat4 ModelView;\
+uniform mat4 Projection;\
+varying vec4 DestColor;\
+\
+void main(void) {\
+DestColor   = SourceColor;\
+gl_Position = Projection*ModelView*Position;\\
+}";
+
+
+
+const char* bs_fsh ="\
+precision lowp float;\
+\
+varying lowp vec4 DestColor;\
+void main(void){\
+gl_FragColor = DestColor;\
+}";
 
 
 
@@ -52,6 +76,14 @@ NWGLProgram* NWGLProgram::create() {
     }
     delete pRet;
     pRet = nullptr;
+    return nullptr;
+}
+
+NWGLProgram* NWGLProgram::createBasicProgram() {
+    NWGLProgram* pRet = new NWGLProgram();
+    if (pRet&&pRet->initWithShaders(bs_vsh , bs_fsh)) {
+        return pRet;
+    }
     return nullptr;
 }
 

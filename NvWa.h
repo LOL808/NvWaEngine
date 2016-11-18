@@ -38,6 +38,8 @@
 #include "Nodes/Node.h"
 #include "Nodes/TestDrawNode.h"
 
+//Sprite
+#include "Sprite/NWSprite.h"
 
 
 //FILE

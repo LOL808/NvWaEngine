@@ -18,6 +18,7 @@
 
 
 
+
 //TestDrawNode* globalTestDW = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 0.0, 0.0, 1.0));
 //
 #include <time.h>
@@ -62,10 +63,15 @@ Director::Director() {
 
 //    std::cout<<FileHelper::getInstance()->_bundlePath;
 
-    NWSpriteFrame* diamond = NWSpriteFrame::create("diamond.png");
+//    NWSpriteFrame* diamond = NWSpriteFrame::create("left.png");
 
-    _testNode = TestDrawNode::createWithSpriteFrame(diamond);
-    _testNode->setPosition(NWPointMake(100,100));
+//    _testNode = new TestDrawNode(3);
+//    _testNode = TestDrawNode::createWithSpriteFrame(diamond);
+//    _testNode->setPosition(NWPointMake(100,100));
+
+//    _sprite = NWSprite::createWithSpriteFrame(diamond);
+//    _sprite->setPosition(NWPointMake(30, 30));
+
 }
 
 
@@ -79,6 +85,12 @@ int deg = 0.0f;
 void Director::testFoo() {
     if (first) {
         first = false;
+        
+//        NWSpriteFrame* frame = NWSpriteFrame::create("left.png");
+//        _sprite = NWSprite::createWithSpriteFrame(frame);
+        _sprite = NWSprite::createWithName("left.png");
+        _sprite->setPosition(NWPointMake(100, 100));
+//        _testNode = new TestDrawNode(3);
         //        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0,0.0, 1.0, 1.0),NWSizeMake(100,100));
 //        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 1, 0.0, 1.0),NWSizeMake(100,100));
 //        _testNode1->setPosition(NWPointMake(200, 200));
@@ -98,8 +110,8 @@ void Director::testFoo() {
     glClear(GL_COLOR_BUFFER_BIT);
 
 
-    _testNode->draw();
-
+//    _testNode->draw();
+    _sprite->draw();
     _glview->draw();
 //
 

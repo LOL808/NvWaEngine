@@ -39,9 +39,8 @@ protected:
 
 
 private:
-    TestDrawNode* _testNode;
-    TestDrawNode* _testNode1;
-    TestDrawNode* _testNode2;
+    
+    NWSprite*     _sprite;
 
     NWSize _viewSize;
     NWMat4 _projectionMatrix;

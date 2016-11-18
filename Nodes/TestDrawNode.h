@@ -25,6 +25,7 @@ public:
     static TestDrawNode* createWithSprite(const char* filename);
 
     TestDrawNode();
+    TestDrawNode(int count);
     TestDrawNode(const NWFloatColor& color, const NWSize& size);
     virtual ~TestDrawNode();
 
@@ -40,6 +41,7 @@ private:
 
     NWSpriteFrame* _spriteFrame;
     NWTexture       *m_texture;
+    NWTexVertex   testVerties[3];
 
 };
 

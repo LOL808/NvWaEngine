@@ -12,7 +12,7 @@
 #include "../Utils/NWMacro.h"
 
 
-#define RD_RGB_PREMULTIPLY_ALPHA(vr, vg, vb, va) \
+#define NW_RGB_PREMULTIPLY_ALPHA(vr, vg, vb, va) \
 (NW_uint32)(((NW_uint32)((NW_uchar)(vr) * ((NW_uchar)(va) + 1)) >> 8) | \
 ((NW_uint32)((NW_uchar)(vg) * ((NW_uchar)(va) + 1) >> 8) << 8) | \
 ((NW_uint32)((NW_uchar)(vb) * ((NW_uchar)(va) + 1) >> 8) << 16) | \
@@ -25,7 +25,7 @@ void NWTexture::premultipliedAlpha(void)
     NW_uint32 *fourBytes = (NW_uint32 *)_data;
     for (NW_uint32 i = 0; i < _width * _height; i++) {
         NW_uchar *p = _data + i * 4;
-        fourBytes[i] = RD_RGB_PREMULTIPLY_ALPHA(p[0], p[1], p[2], p[3]);
+        fourBytes[i] = NW_RGB_PREMULTIPLY_ALPHA(p[0], p[1], p[2], p[3]);
     }
 
     _isPremultipliedAlpha = true;
@@ -79,8 +79,9 @@ void NWTexture::createGLTexture() {
     glGenTextures(1, &_texture);
     glBindTexture(GL_TEXTURE_2D, _texture);
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+//    glTexParameteri(GL_TEXTURE_2D, <#GLenum pname#>, <#GLint param#>)
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);

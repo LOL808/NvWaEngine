@@ -76,7 +76,7 @@ typedef struct NWBaiscVertex{
     NWFloatColor    color;
 }NWBaiscVertex;
 
-typedef struct NWTextVertex{
+typedef struct NWTexVertex{
     NWVector3       position;
     NWFloatColor    color;
     NWTexCoord      texcoord;

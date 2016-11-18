@@ -16,6 +16,7 @@ class NWGLProgram {
 public:
 
     static NWGLProgram* create();
+    static NWGLProgram* createBasicProgram();
     static NWGLProgram* create(const char* vshContent, const char* fshContent);
 
     GLint getPositionSlot() {return _positionSlot;}

@@ -15,6 +15,7 @@
 #include "../Utils/NWMacro.h"
 
 
+
 TestDrawNode* TestDrawNode::createWithSpriteFrame(const NWSpriteFrame *spriteFrame) {
     TestDrawNode* pRet = new TestDrawNode;
     if (pRet&&pRet->initWithSpriteFrame(spriteFrame)) {
@@ -99,7 +100,7 @@ bool TestDrawNode::initWithSpriteFrame(const NWSpriteFrame *spriteFrame) {
     bottom = 0.0;
 
 //    _nodeSize = spriteFrame->_size;
-    _nodeSize = NWSizeMake(100, 100);
+//    _nodeSize = NWSizeMake(50, 50);
 
     NWFloatColor color = NWFloatColorMake(1.0, 1.0, 1.0, 1.0);
     _verties[0].position = {-_nodeSize.width/2,_nodeSize.height/2,0};
@@ -131,50 +132,73 @@ bool TestDrawNode::initWithSpriteFrame(const NWSpriteFrame *spriteFrame) {
 }
 
 void TestDrawNode::draw() {
-
+//
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     if (_isVertextDirty) {
-        glBufferData(GL_ARRAY_BUFFER, sizeof(_verties), _verties, GL_DYNAMIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(testVerties), testVerties, GL_DYNAMIC_DRAW);
         _isVertextDirty = false;
     }
-
+//
     glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
-
+//
     glActiveTexture(GL_TEXTURE0);
-
+//
     glBindTexture(GL_TEXTURE_2D, _spriteFrame->_texture);
-
+//
     glUniform1i(_glProgarm->getTextureUniformSlot(), 0);
-
+//
     glEnable(GL_BLEND);
-
-//    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-//    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-//} else {
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-
+//
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+////    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+////} else {
+//    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//
+//
     glUniformMatrix4fv(_glProgarm->getModelViewSlot(), 1, GL_FALSE, _modelView.mat);
-    RD_CHECK_GL_ERROR();
+//    RD_CHECK_GL_ERROR();
     glUniformMatrix4fv(_glProgarm->getProjectionSlot(), 1, GL_FALSE, Director::getInstance()->getProjectionMatrix().mat);
-    RD_CHECK_GL_ERROR();
-
+//    RD_CHECK_GL_ERROR();
+//
     glVertexAttribPointer(_glProgarm->getPositionSlot(), 3, GL_FLOAT, GL_FALSE,
                           sizeof(NWTexVertex), 0);
-    RD_CHECK_GL_ERROR();
+//    RD_CHECK_GL_ERROR();
     glVertexAttribPointer(_glProgarm->getColorSlot(), 4, GL_FLOAT, GL_FALSE,
                           sizeof(NWTexVertex), (GLvoid*)offsetof(NWTexVertex, color));
-    RD_CHECK_GL_ERROR();
+//    RD_CHECK_GL_ERROR();
     glVertexAttribPointer(_glProgarm->getTexCoordSlot(), 2, GL_FLOAT, GL_FALSE,
-                          sizeof(NWTextVertex), (GLvoid *)offsetof(NWTexVertex, texcoord));
+                          sizeof(NWTexVertex), (GLvoid *)offsetof(NWTexVertex, texcoord));
     RD_CHECK_GL_ERROR();
-
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
 
 TestDrawNode::TestDrawNode() {
     glGenBuffers(1, &_vertexBuffer);
+}
+
+TestDrawNode::TestDrawNode(int a) {
+    _glProgarm = NWGLProgram::createBasicProgram();
+    glGenBuffers(1, &_vertexBuffer);
+    testVerties[0].position = {-100,100,0};
+    testVerties[1].position = {-100,-100,0};
+    testVerties[2].position = {100,100,0};
+
+
+    ////  LT
+    testVerties[0].texcoord.u = 0.0f;
+    testVerties[0].texcoord.v = 1.0f;
+    ////
+    //  LB
+    testVerties[1].texcoord.u = 0.0f;
+    testVerties[1].texcoord.v = 0.0f;
+    ////
+    ////  RB
+    testVerties[2].texcoord.u = 1.0f;
+    testVerties[2].texcoord.v = 1.0f;
+
+    testVerties[0].color = testVerties[1].color = testVerties[2].color =  NWFloatColorMake(1.0, 0.0, 0.0, 1.0);
 }
 
 TestDrawNode::TestDrawNode(const NWFloatColor& color, const NWSize& size):Node() {

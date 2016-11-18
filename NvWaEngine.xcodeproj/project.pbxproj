@@ -34,8 +34,6 @@
 		2A4E70B81DC7122B00E90562 /* NWResolution.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4E70B61DC7122B00E90562 /* NWResolution.h */; };
 		2A4F2E301DCC924B00DF384A /* NWSpriteFrameCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F2E2E1DCC924B00DF384A /* NWSpriteFrameCache.cpp */; };
 		2A4F2E311DCC924B00DF384A /* NWSpriteFrameCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4F2E2F1DCC924B00DF384A /* NWSpriteFrameCache.h */; };
-		2A4F2E371DCDDC5C00DF384A /* NWSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F2E351DCDDC5C00DF384A /* NWSprite.cpp */; };
-		2A4F2E381DCDDC5C00DF384A /* NWSprite.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2A4F2E361DCDDC5C00DF384A /* NWSprite.hpp */; };
 		2A87A5B41DC1AA710040F061 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B21DC1AA710040F061 /* Node.cpp */; };
 		2A87A5B51DC1AA710040F061 /* Node.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A87A5B31DC1AA710040F061 /* Node.h */; };
 		2A87A5B91DC1AC660040F061 /* NWGLProgramCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A5B71DC1AC660040F061 /* NWGLProgramCache.cpp */; };
@@ -48,6 +46,8 @@
 		2A9265551DBDD0B2005302A5 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9265491DBDCFF8005302A5 /* Game.h */; };
 		2A9265561DBDD0B2005302A5 /* GameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A92654A1DBDCFF8005302A5 /* GameProtocol.h */; };
 		2A92655A1DBDD379005302A5 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9265591DBDD379005302A5 /* Logger.h */; };
+		2AB2D8771DD04C3A00DFA737 /* NWSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2D8751DD04C3A00DFA737 /* NWSprite.cpp */; };
+		2AB2D8781DD04C3A00DFA737 /* NWSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AB2D8761DD04C3A00DFA737 /* NWSprite.h */; };
 		2ABEE1251DBF158A00D5DE00 /* NWTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1241DBF158A00D5DE00 /* NWTypes.h */; };
 		2ABEE1281DBF1CD600D5DE00 /* PlatformDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE1271DBF1CD600D5DE00 /* PlatformDefine.h */; };
 		2ABEE12B1DBF215500D5DE00 /* NWMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE1291DBF215500D5DE00 /* NWMath.c */; };
@@ -98,8 +98,6 @@
 		2A4E70B61DC7122B00E90562 /* NWResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NWResolution.h; path = Core/NWResolution.h; sourceTree = SOURCE_ROOT; };
 		2A4F2E2E1DCC924B00DF384A /* NWSpriteFrameCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWSpriteFrameCache.cpp; sourceTree = "<group>"; };
 		2A4F2E2F1DCC924B00DF384A /* NWSpriteFrameCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWSpriteFrameCache.h; sourceTree = "<group>"; };
-		2A4F2E351DCDDC5C00DF384A /* NWSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWSprite.cpp; sourceTree = "<group>"; };
-		2A4F2E361DCDDC5C00DF384A /* NWSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NWSprite.hpp; sourceTree = "<group>"; };
 		2A6234351DBDCBCD004152BA /* libNvWaEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNvWaEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6234461DBDCC22004152BA /* NvWa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvWa.h; sourceTree = "<group>"; };
 		2A87A5B21DC1AA710040F061 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
@@ -114,6 +112,8 @@
 		2A9265491DBDCFF8005302A5 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Core/Game.h; sourceTree = SOURCE_ROOT; };
 		2A92654A1DBDCFF8005302A5 /* GameProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameProtocol.h; path = Core/GameProtocol.h; sourceTree = SOURCE_ROOT; };
 		2A9265591DBDD379005302A5 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Utils/Logger.h; sourceTree = SOURCE_ROOT; };
+		2AB2D8751DD04C3A00DFA737 /* NWSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWSprite.cpp; sourceTree = "<group>"; };
+		2AB2D8761DD04C3A00DFA737 /* NWSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWSprite.h; sourceTree = "<group>"; };
 		2ABEE1241DBF158A00D5DE00 /* NWTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTypes.h; sourceTree = "<group>"; };
 		2ABEE1271DBF1CD600D5DE00 /* PlatformDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformDefine.h; sourceTree = "<group>"; };
 		2ABEE1291DBF215500D5DE00 /* NWMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NWMath.c; sourceTree = "<group>"; };
@@ -189,12 +189,12 @@
 		2A29B1F21DCB24CB003FF26B /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
+				2AB2D8751DD04C3A00DFA737 /* NWSprite.cpp */,
+				2AB2D8761DD04C3A00DFA737 /* NWSprite.h */,
 				2A29B1F91DCC24C3003FF26B /* NWSpriteFrame.cpp */,
 				2A29B1FA1DCC24C3003FF26B /* NWSpriteFrame.h */,
 				2A4F2E2E1DCC924B00DF384A /* NWSpriteFrameCache.cpp */,
 				2A4F2E2F1DCC924B00DF384A /* NWSpriteFrameCache.h */,
-				2A4F2E351DCDDC5C00DF384A /* NWSprite.cpp */,
-				2A4F2E361DCDDC5C00DF384A /* NWSprite.hpp */,
 			);
 			path = Sprite;
 			sourceTree = SOURCE_ROOT;
@@ -374,6 +374,7 @@
 				2ABEE13B1DBF6B3400D5DE00 /* CC3Foundation.h in Headers */,
 				2ABEE1251DBF158A00D5DE00 /* NWTypes.h in Headers */,
 				2A29B1E91DCB0993003FF26B /* pnglibconf.h in Headers */,
+				2AB2D8781DD04C3A00DFA737 /* NWSprite.h in Headers */,
 				2A29B1E81DCB0993003FF26B /* pngconf.h in Headers */,
 				2ABEE1441DBF6B3400D5DE00 /* ccTypes.h in Headers */,
 				2ABEE13D1DBF6B3400D5DE00 /* CC3GLMatrix.h in Headers */,
@@ -384,7 +385,6 @@
 				2A4E70AC1DC646FF00E90562 /* NWFilePorting.h in Headers */,
 				2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */,
 				2A4E70901DC4EF5500E90562 /* NWFileHelper.h in Headers */,
-				2A4F2E381DCDDC5C00DF384A /* NWSprite.hpp in Headers */,
 				2ABEE1401DBF6B3400D5DE00 /* CC3Kazmath.h in Headers */,
 				2A29B1DD1DCB07E4003FF26B /* NWData.h in Headers */,
 				2A4E70B81DC7122B00E90562 /* NWResolution.h in Headers */,
@@ -462,7 +462,7 @@
 				2A87A5C71DC1E7B10040F061 /* TestDrawNode.cpp in Sources */,
 				2A29B1D61DCB0345003FF26B /* NWTexture.cpp in Sources */,
 				2ABEE13C1DBF6B3400D5DE00 /* CC3Foundation.m in Sources */,
-				2A4F2E371DCDDC5C00DF384A /* NWSprite.cpp in Sources */,
+				2AB2D8771DD04C3A00DFA737 /* NWSprite.cpp in Sources */,
 				2ABEE1431DBF6B3400D5DE00 /* CC3Math.m in Sources */,
 				2A0437D31DBE4C5000ACBAD2 /* Director.cpp in Sources */,
 				2A29B2001DCC2DD3003FF26B /* BasicVertexShader.vsh in Sources */,

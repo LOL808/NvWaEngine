@@ -48,7 +48,7 @@ void* GLViewImpl::getEAGLView() {
 
 void GLViewImpl::draw() {
     NWGLView_iOS* view = (NWGLView_iOS*)_eaglview;
-//    [view setContentScaleFactor:3.0f];
+    [view setContentScaleFactor:3.0f];
 //    view
     [view render];
 }

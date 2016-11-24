@@ -67,6 +67,10 @@
 		2ABEE14D1DC0796100D5DE00 /* DirectorCaller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */; };
 		2ABEE14E1DC0796100D5DE00 /* DirectorCaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */; };
 		2AFCD6931DC0803B0094116F /* Game-iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCD6921DC0803B0094116F /* Game-iOS.mm */; };
+		ED6BCDBB1DE2DE6000B0A5BA /* NWBitmapFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6BCDB91DE2DE6000B0A5BA /* NWBitmapFont.cpp */; };
+		ED6BCDBC1DE2DE6000B0A5BA /* NWBitmapFont.h in Headers */ = {isa = PBXBuildFile; fileRef = ED6BCDBA1DE2DE6000B0A5BA /* NWBitmapFont.h */; };
+		ED6BCDC41DE2E43E00B0A5BA /* NWTTFFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6BCDC21DE2E43E00B0A5BA /* NWTTFFont.cpp */; };
+		ED6BCDC51DE2E43E00B0A5BA /* NWTTFFont.h in Headers */ = {isa = PBXBuildFile; fileRef = ED6BCDC31DE2E43E00B0A5BA /* NWTTFFont.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +137,10 @@
 		2ABEE14B1DC0796100D5DE00 /* DirectorCaller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DirectorCaller.mm; sourceTree = "<group>"; };
 		2ABEE14C1DC0796100D5DE00 /* DirectorCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorCaller.h; sourceTree = "<group>"; };
 		2AFCD6921DC0803B0094116F /* Game-iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Game-iOS.mm"; sourceTree = "<group>"; };
+		ED6BCDB91DE2DE6000B0A5BA /* NWBitmapFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWBitmapFont.cpp; sourceTree = "<group>"; };
+		ED6BCDBA1DE2DE6000B0A5BA /* NWBitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBitmapFont.h; sourceTree = "<group>"; };
+		ED6BCDC21DE2E43E00B0A5BA /* NWTTFFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NWTTFFont.cpp; sourceTree = "<group>"; };
+		ED6BCDC31DE2E43E00B0A5BA /* NWTTFFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTTFFont.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +244,7 @@
 		2A6234371DBDCBCD004152BA /* NvWaEngine */ = {
 			isa = PBXGroup;
 			children = (
+				ED6BCDB81DE2DDE200B0A5BA /* Texts */,
 				2A29B1F21DCB24CB003FF26B /* Sprite */,
 				2A29B1D31DCB01AB003FF26B /* Texture */,
 				2A4E70AA1DC646FF00E90562 /* Porting */,
@@ -353,6 +362,17 @@
 			path = Cocos3DMathLib;
 			sourceTree = SOURCE_ROOT;
 		};
+		ED6BCDB81DE2DDE200B0A5BA /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				ED6BCDB91DE2DE6000B0A5BA /* NWBitmapFont.cpp */,
+				ED6BCDBA1DE2DE6000B0A5BA /* NWBitmapFont.h */,
+				ED6BCDC21DE2E43E00B0A5BA /* NWTTFFont.cpp */,
+				ED6BCDC31DE2E43E00B0A5BA /* NWTTFFont.h */,
+			);
+			path = Texts;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -368,9 +388,11 @@
 				2ABEE1481DBF93A800D5DE00 /* NWMatMath.h in Headers */,
 				2ABEE1421DBF6B3400D5DE00 /* CC3Math.h in Headers */,
 				2A4F2E311DCC924B00DF384A /* NWSpriteFrameCache.h in Headers */,
+				ED6BCDC51DE2E43E00B0A5BA /* NWTTFFont.h in Headers */,
 				2A29B2011DCC2DD3003FF26B /* BasicFragmentShader.fsh in Headers */,
 				2A87A5B51DC1AA710040F061 /* Node.h in Headers */,
 				2A0437BD1DBE453A00ACBAD2 /* NWGLView-iOS.h in Headers */,
+				ED6BCDBC1DE2DE6000B0A5BA /* NWBitmapFont.h in Headers */,
 				2ABEE13B1DBF6B3400D5DE00 /* CC3Foundation.h in Headers */,
 				2ABEE1251DBF158A00D5DE00 /* NWTypes.h in Headers */,
 				2A29B1E91DCB0993003FF26B /* pnglibconf.h in Headers */,
@@ -452,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6BCDBB1DE2DE6000B0A5BA /* NWBitmapFont.cpp in Sources */,
 				2A0437BF1DBE463600ACBAD2 /* NWGLView-iOS.m in Sources */,
 				2A87A5C11DC1AF690040F061 /* NWGLProgram.cpp in Sources */,
 				2A4F2E301DCC924B00DF384A /* NWSpriteFrameCache.cpp in Sources */,
@@ -474,6 +497,7 @@
 				2A0437DB1DBE500700ACBAD2 /* GLViewImpl-iOS.mm in Sources */,
 				2A29B1D91DCB0751003FF26B /* NWTexturePng.cpp in Sources */,
 				2ABEE13F1DBF6B3400D5DE00 /* CC3Kazmath.c in Sources */,
+				ED6BCDC41DE2E43E00B0A5BA /* NWTTFFont.cpp in Sources */,
 				2ABEE12B1DBF215500D5DE00 /* NWMath.c in Sources */,
 				2A4E70A81DC4FEA400E90562 /* NWFilePorting-iOS.mm in Sources */,
 				2A29B1FB1DCC24C3003FF26B /* NWSpriteFrame.cpp in Sources */,

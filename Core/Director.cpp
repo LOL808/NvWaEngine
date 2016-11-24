@@ -16,7 +16,10 @@
 #include <fstream>
 
 
-
+clock_t deltaTime = 0;
+unsigned int frames = 0;
+double  frameRate = 60;
+double  averageFrameTimeMilliseconds = 16.666666;
 
 
 //TestDrawNode* globalTestDW = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 0.0, 0.0, 1.0));
@@ -59,25 +62,12 @@ Director::~Director() {
 
 Director::Director() {
 
-
-
-//    std::cout<<FileHelper::getInstance()->_bundlePath;
-
-//    NWSpriteFrame* diamond = NWSpriteFrame::create("left.png");
-
-//    _testNode = new TestDrawNode(3);
-//    _testNode = TestDrawNode::createWithSpriteFrame(diamond);
-//    _testNode->setPosition(NWPointMake(100,100));
-
-//    _sprite = NWSprite::createWithSpriteFrame(diamond);
-//    _sprite->setPosition(NWPointMake(30, 30));
-
 }
 
 
 void Director::mainLoop() {
     testFoo();
-    this_thread::sleep_for(chrono::milliseconds(2000));
+    this_thread::sleep_for(chrono::milliseconds(16));
 }
 
 bool first = true;
@@ -86,35 +76,42 @@ void Director::testFoo() {
     if (first) {
         first = false;
         
-//        NWSpriteFrame* frame = NWSpriteFrame::create("left.png");
-//        _sprite = NWSprite::createWithSpriteFrame(frame);
-        _sprite = NWSprite::createWithName("left.png");
-        _sprite->setPosition(NWPointMake(100, 100));
-//        _testNode = new TestDrawNode(3);
-        //        _testNode = TestDrawNode::createWithColorAndSize(NWFloatColorMake(0.0,0.0, 1.0, 1.0),NWSizeMake(100,100));
-//        _testNode1 = TestDrawNode::createWithColorAndSize(NWFloatColorMake(1.0, 1, 0.0, 1.0),NWSizeMake(100,100));
-//        _testNode1->setPosition(NWPointMake(200, 200));
-//
-//        _testNode2 = TestDrawNode::createWithSprite("test.png");
-////        _testNode2->setPosition(NWPointMake(50,200));
-////        _testNode->setPosition(NWPointMake(50, 50));
-//        NWTexture* text = NWTexture::createWithFile("test.png");
-//
-//        _testNode->setRotation(0);
-//        _testNode1->setRotation(-30);
-//        _testNode2->setRotation(30);
+        NWBitmapFont* font = NWBitmapFont::create("hello", "bmf.fnt", "bmf_0.png");
+        
+//        _sprite = NWSprite::createWithName("bmf_0.png");
+//        _sprite->setPosition(NWPointMake(100, 100));
+//        _sprite->setRotation(45);
+//        _sprite->setRotation(45);
         glViewport(0, 0, _viewSize.width, _viewSize.height);
     }
 
+    clock_t beginTime = clock();
+    
     glClearColor(0.8, 0.8, 0.8, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
+//    _sprite->setRotation(10);
 
 
 //    _testNode->draw();
-    _sprite->draw();
+//    _sprite->draw();
     _glview->draw();
+    
+    clock_t endTime = clock();
+    deltaTime = endTime - beginTime;
+//    cout<<deltaTime<<endl;
+//    
+//    if( clockToMilliseconds(deltaTime)>1000.0){ //every second
+//        frameRate = (double)frames*0.5 +  frameRate*0.5; //more stable
+//        frames = 0;
+//        deltaTime -= CLOCKS_PER_SEC;
+//        averageFrameTimeMilliseconds  = 1000.0/(frameRate==0?0.001:frameRate);
+//        
+//        if(vsync)
+//            std::cout<<"FrameTime was:"<<averageFrameTimeMilliseconds<<std::endl;
+//        else
+//            std::cout<<"CPU time was:"<<averageFrameTimeMilliseconds<<std::endl;
+//    }
 //
-
 }
 
 

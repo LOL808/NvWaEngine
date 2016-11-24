@@ -12,6 +12,7 @@
 //#ifdef NW_TARGET_iOS
 
 typedef unsigned char   NW_uchar;
+typedef char            NW_char;
 typedef int16_t         NW_int16;
 typedef uint16_t        NW_uint16;
 typedef int32_t         NW_int32;

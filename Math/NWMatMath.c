@@ -33,11 +33,7 @@ float getVector3Length(const NWVector3* vecInput) {
 NWVector3* normalizeVector3(NWVector3* vecOutput, const NWVector3* vecInput) {
 
     GLfloat l = 1.0f/getVector3Length(vecInput);
-//    NWVector3 tempVec;
-//
-//    tempVec.x = vecInput->x*l;
-//    tempVec.y = vecInput->y*l;
-//    tempVec.z = vecInput->z*l;
+
     vecOutput->x = vecInput->x*l;
     vecOutput->y = vecInput->y*l;
     vecOutput->z = vecInput->z*l;

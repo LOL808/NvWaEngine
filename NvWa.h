@@ -41,6 +41,8 @@
 //Sprite
 #include "Sprite/NWSprite.h"
 
+//TEXT
+#include "Texts/NWBitmapFont.h"
 
 //FILE
 #include "Utils/NWFileHelper.h"

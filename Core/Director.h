@@ -41,11 +41,11 @@ protected:
 private:
     
     NWSprite*     _sprite;
+    NWBitmapFont* _bitmapfont;
 
     NWSize _viewSize;
     NWMat4 _projectionMatrix;
-//    GLuint _posSlot;
-//    GLuint _colorSlot;
+
     GLViewImpl* _glview;
     static Director* _instance;
 };

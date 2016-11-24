@@ -70,15 +70,19 @@ void Director::mainLoop() {
     this_thread::sleep_for(chrono::milliseconds(16));
 }
 
+//NWBitmapFont* font = NWBitmapFont::create("hello", "bmf.fnt", "bmf_0.png");
 bool first = true;
 int deg = 0.0f;
 void Director::testFoo() {
     if (first) {
         first = false;
         
-        NWBitmapFont* font = NWBitmapFont::create("hello", "bmf.fnt", "bmf_0.png");
+//        NWBitmapFont* font = NWBitmapFont::create("hello", "bmf.fnt", "bmf_0.png");
         
-//        _sprite = NWSprite::createWithName("bmf_0.png");
+        _sprite = NWSprite::createWithName("bmf_0.png");
+        _bitmapfont = NWBitmapFont::create("T", "A.fnt", "A_0.png");
+//        _bitmapfont = NWBitmapFont::create("0", "bmf.fnt", "bmf_0.png");
+        _bitmapfont->setPosition(NWPointMake(100, 100));
 //        _sprite->setPosition(NWPointMake(100, 100));
 //        _sprite->setRotation(45);
 //        _sprite->setRotation(45);
@@ -90,8 +94,8 @@ void Director::testFoo() {
     glClearColor(0.8, 0.8, 0.8, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 //    _sprite->setRotation(10);
-
-
+//    font->draw();
+    _bitmapfont->draw();
 //    _testNode->draw();
 //    _sprite->draw();
     _glview->draw();

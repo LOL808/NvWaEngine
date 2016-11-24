@@ -19,6 +19,7 @@ class TestDrawNode;
 class NWSpriteFrame{
     friend class NWSprite;
     friend class TestDrawNode;
+    friend class NWBitmapFont;
 public:
     static NWSpriteFrame* create(const char* filename);
 protected:

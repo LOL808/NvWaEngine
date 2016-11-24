@@ -11,6 +11,7 @@
 
 #include "../Math/NWTypes.h"
 #include "../Nodes/Node.h"
+#include "../Sprite/NWSpriteFrame.h"
 #include <string>
 #include <map>
 
@@ -57,6 +58,8 @@ public:
     string getString() {return _text;}
     void   setString(string text) {_text = text;}
     
+    void draw();
+    
 private:
     NWBitmapFont(string text, string fntPath, string texturePaht);
 
@@ -65,8 +68,9 @@ private:
     void parseCommonData(const string& data);
     void parseCharactorData(const string& data);
     
-    void setupVertexAndTexture(string text);
+    void setupVertexAndTexture(string text, float height);
 private:
+    
     std::map<int,CharInfo> _characters;
     string _text;
     
@@ -74,8 +78,10 @@ private:
     NW_int16    _scaleW;
     NW_int16    _scaleH;
     NW_uchar    _pages;
-//    NW_char     _charsetDesc[256];
     NW_uchar    _base;
+    
+    NWTexVertex* _fontVerties;
+    NWSpriteFrame* _spriteFrame;
 };
 
 //class NWBitMapFont
